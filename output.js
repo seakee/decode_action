@@ -1,654 +1,691 @@
-//Thu Nov 21 2024 03:22:24 GMT+0000 (Coordinated Universal Time)
+//Fri Nov 22 2024 05:15:25 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 /*
-活动名称：京东直播互动抽奖
-活动链接：https://h5.m.jd.com/dev/3pbY8ZuCx4ML99uttZKLHC2QcAMn/live.html?id=<直播间id>
-环境变量：jd_liveLottery_ids // 直播间id，多个用英文逗号，@，换行分割
-        jd_liveLottery_threads // 控制并发线程数（正整数），默认1，最大10
-        jd_liveLottery_interval // 自定义运行间隔时长（整数，单位毫秒），默认500
-        jd_liveLottery_notify // 是否推送通知（true/false），默认不推送
-        jd_liveLottery_pinFilter // 账号pin过滤，多个用@进行分割
-		jd_liveLottery_rewardnum // 京豆低于值不跑，默认1
+东东农场快速浇水
+环境变量：FRUIT_PLANT_LEVEL // 自动种植的作物等级（正整数），默认为2
+        FRUIT_WATERING_NOTIFY // 是否推送通知（true/false），默认不推送
+        FRUIT_WATERING_PIN // 指定PIN账号浇水，多个用 & 隔开
 
-高并发脚本，谨慎使用并发
-活动限制IP严重，建议使用代理
-黑号会持续擦肩，同一直播间活动请勿连续抽奖，以直播间悬浮标识为准
+每月或每周只能领2次红包，由于常规浇水太慢，脚本优先使用快速浇水卡
 
-cron:1 1 1 1 *
+cron:1 1 1 1 * jd_fruit_watering.js
 
 */
 
-const $ = new Env("\u4EAC\u4E1C\u76F4\u64AD\u4E92\u52A8\u62BD\u5956");
+const $ = new Env("\u4E1C\u4E1C\u519C\u573A\u5FEB\u901F\u6D47\u6C34");
 var iｉl = "jsjiami.com.v7";
-const I1llIl = iii1II;
-(function (i1ilIl, llI11I, Il1i11, iii1li, Iil1i1, IIii11, iliIl1) {
-  return i1ilIl = i1ilIl >> 9, IIii11 = "hs", iliIl1 = "hs", function (Ii1il1, iii1ll, IIliI1, il1lI, IliIIl) {
-    const llI11l = iii1II;
-    il1lI = "tfi", IIii11 = il1lI + IIii11, IliIIl = "up", iliIl1 += IliIIl, IIii11 = IIliI1(IIii11), iliIl1 = IIliI1(iliIl1), IIliI1 = 0;
-    const I1il1l = Ii1il1();
-    while (true && --iii1li + iii1ll) {
+const liiI1i = iii1II;
+(function (ii1ill, II1iI, llI1II, lIli1l, lillIi, illIi1, ii1ili) {
+  return ii1ill = ii1ill >> 5, illIi1 = "hs", ii1ili = "hs", function (liil1i, lI1lil, i1l1iI, liil1l, lI1lii) {
+    const iIIiiI = iii1II;
+    liil1l = "tfi", illIi1 = liil1l + illIi1, lI1lii = "up", ii1ili += lI1lii, illIi1 = i1l1iI(illIi1), ii1ili = i1l1iI(ii1ili), i1l1iI = 0;
+    const Iiili1 = liil1i();
+    while (true && --lIli1l + lI1lil) {
       try {
-        il1lI = parseInt(llI11l(731, "pNiu")) / 1 + -parseInt(llI11l(467, "gBkk")) / 2 + -parseInt(llI11l(665, "ndL&")) / 3 * (parseInt(llI11l(692, "AWc*")) / 4) + parseInt(llI11l(452, "tJ8k")) / 5 * (parseInt(llI11l(481, "Gt2@")) / 6) + -parseInt(llI11l(663, "9h%U")) / 7 + parseInt(llI11l(520, "GeCP")) / 8 * (parseInt(llI11l(682, "AB[Z")) / 9) + -parseInt(llI11l(653, "tR]F")) / 10 * (-parseInt(llI11l(521, "ObUp")) / 11);
-      } catch (lI1l1l) {
-        il1lI = IIliI1;
+        liil1l = -parseInt(iIIiiI(433, "gUB[")) / 1 + parseInt(iIIiiI(345, "B[vv")) / 2 + -parseInt(iIIiiI(476, "bg(6")) / 3 * (parseInt(iIIiiI(244, "SFB7")) / 4) + -parseInt(iIIiiI(462, "S4Ba")) / 5 * (parseInt(iIIiiI(259, "Tc0m")) / 6) + parseInt(iIIiiI(356, "SFB7")) / 7 * (-parseInt(iIIiiI(233, "#0!g")) / 8) + -parseInt(iIIiiI(529, "He&s")) / 9 * (-parseInt(iIIiiI(648, "I%Vs")) / 10) + parseInt(iIIiiI(417, "sT][")) / 11;
+      } catch (Iil1l1) {
+        liil1l = i1l1iI;
       } finally {
-        IliIIl = I1il1l[IIii11]();
-        if (i1ilIl <= iii1li) IIliI1 ? Iil1i1 ? il1lI = IliIIl : Iil1i1 = IliIIl : IIliI1 = IliIIl;else {
-          if (IIliI1 == Iil1i1["replace"](/[IyrLHKpPSDNtTuORqVUh=]/g, "")) {
-            if (il1lI === iii1ll) {
-              I1il1l["un" + IIii11](IliIIl);
+        lI1lii = Iiili1[illIi1]();
+        if (ii1ill <= lIli1l) i1l1iI ? lillIi ? liil1l = lI1lii : lillIi = lI1lii : i1l1iI = lI1lii;else {
+          if (i1l1iI == lillIi["replace"](/[QDWNrgOptPuSyUdxnhFYk=]/g, "")) {
+            if (liil1l === lI1lil) {
+              Iiili1["un" + illIi1](lI1lii);
               break;
             }
-            I1il1l[iliIl1](IliIIl);
+            Iiili1[ii1ili](lI1lii);
           }
         }
       }
     }
-  }(Il1i11, llI11I, function (IIliII, iiliI, Ill11I, I1il1i, IliIIi, lI1l1i, i1iil) {
-    return iiliI = "split", IIliII = arguments[0], IIliII = IIliII[iiliI](""), Ill11I = `\x72\x65\x76\x65\x72\x73\x65`, IIliII = IIliII[Ill11I]("v"), I1il1i = `\x6a\x6f\x69\x6e`, 1514993, IIliII[I1il1i]("");
+  }(llI1II, II1iI, function (i1i11I, il1iIl, iii1ii, il1iIi, iii1il, II11li, I1l11i) {
+    return il1iIl = "split", i1i11I = arguments[0], i1i11I = i1i11I[il1iIl](""), iii1ii = `\x72\x65\x76\x65\x72\x73\x65`, i1i11I = i1i11I[iii1ii]("v"), il1iIi = `\x6a\x6f\x69\x6e`, 1417119, i1i11I[il1iIi]("");
   });
-}(103424, 182667, Iii11l, 204), Iii11l) && (iｉl = 9755);
-const jdCookie = require(I1llIl(650, "#9o@")),
-  common = require("./utils/Rebels_jdCommon"),
-  notify = require("./utils/Rebels_sendJDNotify");
-console[I1llIl(801, "ndL&")](""), console["log"]("==========" + $[I1llIl(505, "8NB#")] + I1llIl(638, "ndL&")), console[I1llIl(686, "Rt34")]("jd_liveLottery_ids // \u6D3B\u52A8ID"), console["log"](I1llIl(441, "qXRN")), console[I1llIl(686, "Rt34")](I1llIl(566, "y00*")), console[I1llIl(777, "UpmU")](I1llIl(792, "YZ9I")), console[I1llIl(485, "Gt2@")](I1llIl(508, "&zDZ")), console["log"](I1llIl(482, "Ab7u")), console[I1llIl(672, "AWc*")](I1llIl(758, "LDu9") + $[I1llIl(622, "PIJ5")] + "\u63D0\u793A\u7ED3\u675F=========="), console["log"]("");
-const liveIdList = (process[I1llIl(745, "9h%U")][I1llIl(732, "YZ9I")] || "")[I1llIl(684, "ObUp")](/[,@\n]+/g)[I1llIl(776, "gBkk")](iil1ll => iil1ll[I1llIl(614, "0(LI")]())[I1llIl(552, "3p[Q")](Boolean);
-let taskThreads = process[I1llIl(703, "ReRH")][I1llIl(455, "l659")] || "1";
-const runInterval = process[I1llIl(487, "C9qI")][I1llIl(477, "y00*")] || I1llIl(542, "l659"),
-  isNotify = (process[I1llIl(697, "l659")][I1llIl(766, "Ab7u")] || process[I1llIl(774, "&5!E")]["jd_liveLottery_Notify"]) === I1llIl(456, "F)pI"),
-  pinFilter = (process[I1llIl(752, "YZ9I")][I1llIl(810, "eoFR")] || "")["split"]("@"),
-  rewardnum = parseInt(process["env"][I1llIl(450, "pNiu")]) || 1;
-let cookiesArr = Object[I1llIl(756, "ipL6")](jdCookie)[I1llIl(661, "l659")](iiilil => jdCookie[iiilil])[I1llIl(565, "UpmU")](iil1li => iil1li);
-!cookiesArr[0] && ($[I1llIl(538, "l659")]($[I1llIl(722, "3p[Q")], "\u3010\u63D0\u793A\u3011\u8BF7\u5148\u83B7\u53D6Cookie"), process[I1llIl(788, "g^*J")](1));
-function iii1II(_0x1af857, _0x50ccea) {
-  const _0x342308 = Iii11l();
-  return iii1II = function (_0x1d15b9, _0x28b40f) {
-    _0x1d15b9 = _0x1d15b9 - 437;
-    let _0x13a3fd = _0x342308[_0x1d15b9];
-    if (iii1II["NeawnT"] === undefined) {
-      var _0x410043 = function (_0x1eaca1) {
-        const _0x5a5989 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=";
-        let _0x103f9e = "",
-          _0x257c3d = "";
-        for (let _0x59dc32 = 0, _0x1f757b, _0x2292c4, _0x5c5ad8 = 0; _0x2292c4 = _0x1eaca1["charAt"](_0x5c5ad8++); ~_0x2292c4 && (_0x1f757b = _0x59dc32 % 4 ? _0x1f757b * 64 + _0x2292c4 : _0x2292c4, _0x59dc32++ % 4) ? _0x103f9e += String["fromCharCode"](255 & _0x1f757b >> (-2 * _0x59dc32 & 6)) : 0) {
-          _0x2292c4 = _0x5a5989["indexOf"](_0x2292c4);
+}(6560, 923211, Iii11l, 207), Iii11l) && (iｉl = liiI1i(372, "fzI!"));
+const jdCookie = require(liiI1i(578, "He&s")),
+  notify = require(liiI1i(378, "txF@")),
+  common = require(liiI1i(424, "SFB7")),
+  {
+    H5st
+  } = require(liiI1i(423, "Ux)#")),
+  FRUIT_PLANT_LEVEL = process[liiI1i(630, "k![b")]["FRUIT_PLANT_LEVEL"] || "2",
+  isNotify = process["env"][liiI1i(234, "SFB7")] === liiI1i(548, "KQyc"),
+  PinArr = process[liiI1i(539, "Tc0m")][liiI1i(408, "QWFe")] ? process["env"][liiI1i(485, "haP4")]["split"]("&") : "";
+console[liiI1i(323, "pOgc")](""), console[liiI1i(444, "bg(6")](liiI1i(555, "S4Ba") + $[liiI1i(308, "IKY3")] + "\u53D8\u91CF\u8BF4\u660E=========="), console["log"]("FRUIT_PLANT_LEVEL // \u81EA\u52A8\u79CD\u690D\u7684\u4F5C\u7269\u7B49\u7EA7\uFF08\u6B63\u6574\u6570\uFF09"), console[liiI1i(463, "BiiY")](liiI1i(582, "haP4")), console["log"](liiI1i(377, "FAmv")), console[liiI1i(629, "cvWH")](liiI1i(402, "goqf") + $[liiI1i(350, "zLIJ")] + liiI1i(391, "aX3C")), console["log"]("");
+let cookie = "";
+const cookiesArr = Object["keys"](jdCookie)[liiI1i(430, "haP4")](ll1 => jdCookie[ll1])["filter"](iI1llI => iI1llI);
+!cookiesArr[0] && ($[liiI1i(608, "T!#)")]($["name"], liiI1i(554, "@o2C")), process[liiI1i(252, "C@S!")](1));
+let rs_wait = 1,
+  waitTimes = parseInt(rs_wait) * 1000,
+  uuid = randomString(40),
+  addressid = randomString(10, "123456789"),
+  sid = randomString(32, liiI1i(381, "2O[G")),
+  area = randomString(1, "1234567890") + "-" + randomString(5, "1234567890") + "-" + randomString(5, "1234567890") + "-" + randomString(1, liiI1i(235, "9HJc")),
+  lng = liiI1i(633, "SFB7") + Math[liiI1i(297, "A4yY")](Math["random"]() * 899 + 100),
+  lat = liiI1i(255, "!SmT") + Math[liiI1i(487, "txF@")](Math["random"]() * 899 + 100);
+function iii1II(_0x3b9331, _0x449ffe) {
+  const _0x4405e3 = Iii11l();
+  return iii1II = function (_0x3c0639, _0x5d0709) {
+    _0x3c0639 = _0x3c0639 - 219;
+    let _0x5ad134 = _0x4405e3[_0x3c0639];
+    if (iii1II["EbEPQX"] === undefined) {
+      var _0x4f29db = function (_0x44788d) {
+        const _0x5ac7af = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=";
+        let _0x38a755 = "",
+          _0x582bdf = "";
+        for (let _0x1bb45f = 0, _0x195bee, _0x4a0735, _0x242875 = 0; _0x4a0735 = _0x44788d["charAt"](_0x242875++); ~_0x4a0735 && (_0x195bee = _0x1bb45f % 4 ? _0x195bee * 64 + _0x4a0735 : _0x4a0735, _0x1bb45f++ % 4) ? _0x38a755 += String["fromCharCode"](255 & _0x195bee >> (-2 * _0x1bb45f & 6)) : 0) {
+          _0x4a0735 = _0x5ac7af["indexOf"](_0x4a0735);
         }
-        for (let _0x3faca1 = 0, _0x47225f = _0x103f9e["length"]; _0x3faca1 < _0x47225f; _0x3faca1++) {
-          _0x257c3d += "%" + ("00" + _0x103f9e["charCodeAt"](_0x3faca1)["toString"](16))["slice"](-2);
+        for (let _0xfc13f5 = 0, _0x317f2a = _0x38a755["length"]; _0xfc13f5 < _0x317f2a; _0xfc13f5++) {
+          _0x582bdf += "%" + ("00" + _0x38a755["charCodeAt"](_0xfc13f5)["toString"](16))["slice"](-2);
         }
-        return decodeURIComponent(_0x257c3d);
+        return decodeURIComponent(_0x582bdf);
       };
-      const _0x27729a = function (_0x3af516, _0x22c3bb) {
-        let _0x3364db = [],
-          _0x28ca5c = 0,
-          _0x5ec01f,
-          _0x1742fd = "";
-        _0x3af516 = _0x410043(_0x3af516);
-        let _0x58a6f3;
-        for (_0x58a6f3 = 0; _0x58a6f3 < 256; _0x58a6f3++) {
-          _0x3364db[_0x58a6f3] = _0x58a6f3;
+      const _0x2ed08c = function (_0x2ebeb6, _0x4e6225) {
+        let _0x4907bb = [],
+          _0x5deabc = 0,
+          _0x4acb55,
+          _0x43f5d2 = "";
+        _0x2ebeb6 = _0x4f29db(_0x2ebeb6);
+        let _0xca0d3e;
+        for (_0xca0d3e = 0; _0xca0d3e < 256; _0xca0d3e++) {
+          _0x4907bb[_0xca0d3e] = _0xca0d3e;
         }
-        for (_0x58a6f3 = 0; _0x58a6f3 < 256; _0x58a6f3++) {
-          _0x28ca5c = (_0x28ca5c + _0x3364db[_0x58a6f3] + _0x22c3bb["charCodeAt"](_0x58a6f3 % _0x22c3bb["length"])) % 256, _0x5ec01f = _0x3364db[_0x58a6f3], _0x3364db[_0x58a6f3] = _0x3364db[_0x28ca5c], _0x3364db[_0x28ca5c] = _0x5ec01f;
+        for (_0xca0d3e = 0; _0xca0d3e < 256; _0xca0d3e++) {
+          _0x5deabc = (_0x5deabc + _0x4907bb[_0xca0d3e] + _0x4e6225["charCodeAt"](_0xca0d3e % _0x4e6225["length"])) % 256, _0x4acb55 = _0x4907bb[_0xca0d3e], _0x4907bb[_0xca0d3e] = _0x4907bb[_0x5deabc], _0x4907bb[_0x5deabc] = _0x4acb55;
         }
-        _0x58a6f3 = 0, _0x28ca5c = 0;
-        for (let _0x25405d = 0; _0x25405d < _0x3af516["length"]; _0x25405d++) {
-          _0x58a6f3 = (_0x58a6f3 + 1) % 256, _0x28ca5c = (_0x28ca5c + _0x3364db[_0x58a6f3]) % 256, _0x5ec01f = _0x3364db[_0x58a6f3], _0x3364db[_0x58a6f3] = _0x3364db[_0x28ca5c], _0x3364db[_0x28ca5c] = _0x5ec01f, _0x1742fd += String["fromCharCode"](_0x3af516["charCodeAt"](_0x25405d) ^ _0x3364db[(_0x3364db[_0x58a6f3] + _0x3364db[_0x28ca5c]) % 256]);
+        _0xca0d3e = 0, _0x5deabc = 0;
+        for (let _0xca4979 = 0; _0xca4979 < _0x2ebeb6["length"]; _0xca4979++) {
+          _0xca0d3e = (_0xca0d3e + 1) % 256, _0x5deabc = (_0x5deabc + _0x4907bb[_0xca0d3e]) % 256, _0x4acb55 = _0x4907bb[_0xca0d3e], _0x4907bb[_0xca0d3e] = _0x4907bb[_0x5deabc], _0x4907bb[_0x5deabc] = _0x4acb55, _0x43f5d2 += String["fromCharCode"](_0x2ebeb6["charCodeAt"](_0xca4979) ^ _0x4907bb[(_0x4907bb[_0xca0d3e] + _0x4907bb[_0x5deabc]) % 256]);
         }
-        return _0x1742fd;
+        return _0x43f5d2;
       };
-      iii1II["RXHKRO"] = _0x27729a, _0x1af857 = arguments, iii1II["NeawnT"] = true;
+      iii1II["gJPDFQ"] = _0x2ed08c, _0x3b9331 = arguments, iii1II["EbEPQX"] = true;
     }
-    const _0x36d121 = _0x342308[0],
-      _0x39e823 = _0x1d15b9 + _0x36d121,
-      _0x19da68 = _0x1af857[_0x39e823];
-    return !_0x19da68 ? (iii1II["rkwXtd"] === undefined && (iii1II["rkwXtd"] = true), _0x13a3fd = iii1II["RXHKRO"](_0x13a3fd, _0x28b40f), _0x1af857[_0x39e823] = _0x13a3fd) : _0x13a3fd = _0x19da68, _0x13a3fd;
-  }, iii1II(_0x1af857, _0x50ccea);
+    const _0x6aec46 = _0x4405e3[0],
+      _0x4dcbfd = _0x3c0639 + _0x6aec46,
+      _0x24a4e0 = _0x3b9331[_0x4dcbfd];
+    return !_0x24a4e0 ? (iii1II["QmKCYG"] === undefined && (iii1II["QmKCYG"] = true), _0x5ad134 = iii1II["gJPDFQ"](_0x5ad134, _0x5d0709), _0x3b9331[_0x4dcbfd] = _0x5ad134) : _0x5ad134 = _0x24a4e0, _0x5ad134;
+  }, iii1II(_0x3b9331, _0x449ffe);
 }
 !(async () => {
-  const i1iii = I1llIl,
-    lillIl = {
-      "ZGLlC": i1iii(585, "ndL&")
+  const ililIi = liiI1i,
+    llliii = {
+      "zeABp": function (IllI11, l1llIi) {
+        return IllI11(l1llIi);
+      },
+      "GTIwW": ililIi(607, "9GV*"),
+      "zxhFo": function (II1llI, i11I11) {
+        return II1llI + i11I11;
+      },
+      "EEMZa": function (l1llIl) {
+        return l1llIl();
+      },
+      "OUJtA": function (ii1I1l, ii1I1i, llI) {
+        return ii1I1l(ii1I1i, llI);
+      },
+      "NvCKV": function (llliI, iI1li1) {
+        return llliI + iI1li1;
+      },
+      "BRYQe": function (lllii1, liIli) {
+        return lllii1 * liIli;
+      },
+      "OXDiT": ililIi(429, "@o2C"),
+      "cGMnW": ililIi(355, "cJte"),
+      "vevLG": function (liIll, IilIi1) {
+        return liIll * IilIi1;
+      }
     };
-  notify[i1iii(702, "a^o@")]({
-    "title": $["name"]
-  }), await Main(), isNotify && notify[i1iii(506, "$tp%")]() && (lillIl["ZGLlC"] !== i1iii(804, "ndL&") ? await notify[i1iii(691, "kHwg")]() : iliIIi[i1iii(786, "$Il9")](i1iii(597, "]y5]") + ill11I));
-})()[I1llIl(512, "Ab7u")](iiilii => $[I1llIl(765, "PIJ5")](iiilii))[I1llIl(757, "a^o@")](() => $[I1llIl(725, "$Il9")]());
+  notify["config"]({
+    "title": $[ililIi(451, "P(hT")]
+  }), console[ililIi(280, "!Gq0")](ililIi(464, "BiiY"));
+  for (let iI1liI = 0; iI1liI < cookiesArr[ililIi(413, "sT][")]; iI1liI++) {
+    if (cookiesArr[iI1liI]) {
+      cookie = cookiesArr[iI1liI], $[ililIi(495, "txF@")] = llliii["zeABp"](decodeURIComponent, common[ililIi(503, "txF@")](cookie, llliii["GTIwW"])), $["index"] = llliii[ililIi(573, "#0!g")](iI1liI, 1), $[ililIi(230, "IKY3")] = "", $["message"] = notify["create"]($["index"], $[ililIi(479, "C@S!")]), $["UA"] = common[ililIi(455, "He&s")]($[ililIi(267, "sQ^m")]);
+      if (PinArr) {
+        if (PinArr["includes"](encodeURIComponent($[ililIi(317, "a@Fw")]))) console["log"](ililIi(416, "jPP9") + $["index"] + "\u3011" + ($[ililIi(389, "QWFe")] || $[ililIi(320, "AG^&")]) + ililIi(443, "AG^&")), await llliii[ililIi(428, "cJte")](Main), await $["wait"](llliii[ililIi(232, "He&s")](parseInt, llliii["NvCKV"](llliii[ililIi(521, "k![b")](waitTimes, 2), 1000), 10));else {
+          if (llliii[ililIi(534, "haP4")] === llliii["OXDiT"]) continue;else li1I1[ililIi(490, "a@Fw")](ililIi(276, "a@Fw")), i1ilil[ililIi(368, "AG^&")](lilIii);
+        }
+      } else ililIi(344, "jPP9") !== llliii["cGMnW"] ? (console[ililIi(239, "Tc0m")]("\n******\u5F00\u59CB\u3010\u4EAC\u4E1C\u8D26\u53F7" + $[ililIi(432, "I%Vs")] + "\u3011" + ($[ililIi(440, "aX3C")] || $["UserName"]) + "******\n"), await llliii[ililIi(638, "D@e7")](Main), await $[ililIi(513, "9HJc")](llliii[ililIi(552, "bg(6")](parseInt, llliii[ililIi(311, "He&s")](llliii[ililIi(543, "2O[G")](waitTimes, 2), 1000), 10))) : (l1i111[ililIi(629, "cvWH")](iliII1), II11I1 && (lI1Ill["outFlag"] = true, lI1Ili[ililIi(540, "sT][")] && iIIl11[ililIi(489, "haP4")]["fix"](l1l1I1)));
+    }
+  }
+  isNotify && notify[ililIi(583, "txF@")]() && (notify[ililIi(395, "SFB7")](notify["content"]), await notify[ililIi(290, "A4yY")]());
+})()[liiI1i(343, "SFB7")](IilIiI => $[liiI1i(226, "cJte")](IilIiI))[liiI1i(227, "gUB[")](() => $[liiI1i(615, "I%Vs")]());
 async function Main() {
-  const I1llIi = I1llIl,
-    li1i1i = {
-      "xrtrC": I1llIi(484, "uJTo"),
-      "EjMSn": function (IlIli1, illIiI) {
-        return IlIli1(illIiI);
+  const lilIIl = liiI1i,
+    i1i1I1 = {
+      "pjWbs": lilIIl(520, "&v(!"),
+      "dRASw": function (IiI11, lli) {
+        return IiI11(lli);
       },
-      "tLxOV": function (lI1lli, Ill1l) {
-        return lI1lli > Ill1l;
+      "ChkbB": function (liIlI, lll) {
+        return liIlI * lll;
       },
-      "WoUSE": function (llI1Il, ii1iii) {
-        return llI1Il !== ii1iii;
+      "dxGhl": function (llli1, iIli1i) {
+        return llli1 / iIli1i;
       },
-      "KqZqf": I1llIi(519, "qXRN"),
-      "aWUcW": function (i11iil, Ill1i) {
-        return i11iil === Ill1i;
+      "VaCsG": function (iI1lii, IilIii) {
+        return iI1lii - IilIii;
       },
-      "IJmBp": I1llIi(746, "eoFR"),
-      "OgaKI": function (ii1iil, lllI1l) {
-        return ii1iil > lllI1l;
+      "cuWbn": function (iI1lil, l1lIi1) {
+        return iI1lil === l1lIi1;
       },
-      "QgpQD": function (i11iii, llI1Ii) {
-        return i11iii === llI1Ii;
+      "bhChc": lilIIl(518, "]ovQ"),
+      "SmPsl": function (iIli1l) {
+        return iIli1l();
       },
-      "CLIsr": I1llIi(557, "l659"),
-      "YlQek": function (lllI1i, li1i1l) {
-        return lllI1i >= li1i1l;
+      "ndmZb": function (i1i1II, liiIIl) {
+        return i1i1II * liiIIl;
       },
-      "QrqtU": "Qtwju",
-      "qsPXt": I1llIi(632, "y00*"),
-      "yMdjD": function (II1i1, lI1lll) {
-        return II1i1 !== lI1lll;
+      "gUQsq": function (iil1iI, IlIllI) {
+        return iil1iI === IlIllI;
       },
-      "FKkqe": I1llIi(791, "LDu9"),
-      "dYHcK": I1llIi(641, "R7zK"),
-      "zsNYd": function (iIiII, iil1lI) {
-        return iIiII(iil1lI);
+      "tBaaM": function (il1i1I) {
+        return il1i1I();
       },
-      "IEDDL": I1llIi(465, "l659"),
-      "bsztM": "NJlpM",
-      "LTQVh": I1llIi(764, "gBkk"),
-      "WiAdW": function (iiiliI, li1i1I) {
-        return iiiliI > li1i1I;
+      "pKTzN": function (lI1li1, iI11II) {
+        return lI1li1 === iI11II;
       },
-      "NHtUL": "udYuN"
+      "dvFEw": lilIIl(224, "QWFe"),
+      "tTOkP": function (iIII1I, ilil1i) {
+        return iIII1I + ilil1i;
+      },
+      "zJuOO": function (IlIIi, IiI1l) {
+        return IlIIi >= IiI1l;
+      },
+      "atNtD": lilIIl(295, "&wJj"),
+      "vziOi": function (illlII, iIII11) {
+        return illlII > iIII11;
+      },
+      "rbSrV": function (IiI1i, llll1) {
+        return IiI1i(llll1);
+      },
+      "mrLKf": function (lil11l, i1i1Il) {
+        return lil11l(i1i1Il);
+      },
+      "AeKfX": function (I1lIl1, lil11i) {
+        return I1lIl1 / lil11i;
+      },
+      "zjAlY": function (IlIIl, lI1liI) {
+        return IlIIl < lI1liI;
+      },
+      "cKDPl": lilIIl(501, "zLIJ"),
+      "SxKvC": lilIIl(300, "!Gq0"),
+      "iVSlk": function (i1i1Ii, lllii) {
+        return i1i1Ii(lllii);
+      },
+      "gxfgo": lilIIl(396, "gUB["),
+      "buxup": function (iI11Ii, iIII1l) {
+        return iI11Ii !== iIII1l;
+      },
+      "zaPSx": lilIIl(390, "sT]["),
+      "VFXlO": lilIIl(550, "2O[G"),
+      "mVhRv": function (lllil) {
+        return lllil();
+      },
+      "GTsru": function (iI11Il, iIII1i) {
+        return iI11Il >= iIII1i;
+      },
+      "EhniH": "toGoG",
+      "NSpQO": lilIIl(316, "BiiY"),
+      "cwstL": lilIIl(382, "!Gq0"),
+      "AlaHO": function (iil1i1) {
+        return iil1i1();
+      },
+      "zqAJh": lilIIl(328, "Tc0m"),
+      "yfShw": lilIIl(270, "9HJc"),
+      "WbWnH": function (il1i11, IlIll1) {
+        return il1i11 === IlIll1;
+      },
+      "KOEJS": function (IlIII, ilil1l) {
+        return IlIII === ilil1l;
+      },
+      "GOnwm": lilIIl(394, "[7KZ"),
+      "ElCRS": function (illlIi, I1lIii) {
+        return illlIi === I1lIii;
+      },
+      "iezVJ": function (IiI1I, illlIl) {
+        return IiI1I >= illlIl;
+      },
+      "QJPyg": function (i11ill) {
+        return i11ill();
+      }
     };
+  let IlII1 = false;
   try {
-    if (liveIdList["length"] === 0) {
-      if (li1i1i["WoUSE"](I1llIi(680, "$tp%"), I1llIi(545, "3p[Q"))) {
-        console[I1llIi(637, "]y5]")](li1i1i[I1llIi(640, "ipL6")]);
+    const IIIIIi = await common[lilIIl(570, "gUB[")](cookie);
+    if (!IIIIIi && i1i1I1[lilIIl(301, "!SmT")](typeof IIIIIi, i1i1I1["bhChc"])) {
+      console["log"](lilIIl(392, "[7KZ"));
+      return;
+    }
+    await i1i1I1[lilIIl(613, "haP4")](initForFarm);
+    if ($[lilIIl(469, "S4Ba")]?.[lilIIl(437, "AG^&")]) {
+      if ($["farmInfo"]?.[lilIIl(453, "cJte")] === 2 || i1i1I1[lilIIl(599, "pOgc")]($[lilIIl(312, "9HJc")]?.[lilIIl(612, "gUB[")], 3)) {
+        await i1i1I1[lilIIl(601, "@o2C")](autoCrop);
         return;
-      } else IiII[I1llIi(627, "a@n6")] = true;
-    }
-    const illIii = [...new Set(liveIdList)];
-    try {
-      if (li1i1i[I1llIi(643, "^!J@")](I1llIi(666, "3p[Q"), li1i1i["IJmBp"])) li1[I1llIi(654, "Lh!p")](illIl1), l1llII && (lI11I1[I1llIi(523, "AWc*")] = true, l1il11[I1llIi(600, "R7zK")] && illIli[I1llIi(826, "tJ8k")][I1llIi(573, "ipL6")](l11i1l));else {
-        const Ill1I = parseInt(taskThreads);
-        li1i1i[I1llIi(645, "l659")](Ill1I, 0) && Ill1I !== 1 && (taskThreads = Ill1I);
+      } else {
+        if ($[lilIIl(284, "[7KZ")]?.[lilIIl(337, "#0!g")] === 1) console[lilIIl(222, "0&gr")](lilIIl(625, "pOgc") + $[lilIIl(532, "gUB[")]?.[lilIIl(564, "&v(!")]?.["name"] + "\uFF08\u7B49\u7EA7" + $[lilIIl(277, "zLIJ")]?.["farmUserPro"]?.["prizeLevel"] + lilIIl(450, "Vwy@") + i1i1I1[lilIIl(512, "QWFe")](i1i1I1[lilIIl(359, "a@Fw")]($[lilIIl(617, "jPP9")]?.[lilIIl(330, "9GV*")]?.[lilIIl(504, "9HJc")], $["farmInfo"]?.[lilIIl(253, "sQ^m")]?.[lilIIl(618, "cJte")]), 100)[lilIIl(493, "QWFe")](2) + "%\uFF0C\u5DF2\u6D47\u6C34" + $["farmInfo"]?.["farmUserPro"]?.[lilIIl(340, "C@S!")] / 10 + lilIIl(325, "FAmv") + i1i1I1["dxGhl"](i1i1I1[lilIIl(427, "FAmv")]($[lilIIl(532, "gUB[")]?.["farmUserPro"]?.[lilIIl(631, "He&s")], $["farmInfo"]?.[lilIIl(636, "QWFe")]?.["treeEnergy"]), 10) + "\u6B21\uFF09");else i1i1I1[lilIIl(499, "BiiY")]($[lilIIl(249, "BiiY")]?.["treeState"], 0) && (await i1i1I1[lilIIl(352, "]ovQ")](autoPlant));
       }
-    } catch {
-      taskThreads = 1;
+    } else {
+      console[lilIIl(565, "zLIJ")](lilIIl(241, "cJte") + JSON[lilIIl(261, "haP4")]($[lilIIl(310, "pOgc")]));
+      return;
     }
-    taskThreads = Math["min"](taskThreads, 10), $[I1llIi(741, "bXr%")] = null;
-    if (runInterval) {
-      if (li1i1i[I1llIi(531, "ObUp")](li1i1i[I1llIi(760, "ndL&")], li1i1i["CLIsr"])) try {
-        const i11iiI = parseInt(runInterval);
-        li1i1i[I1llIi(629, "SeZf")](i11iiI, 0) && (li1i1i["aWUcW"](li1i1i["QrqtU"], li1i1i[I1llIi(624, "#9o@")]) ? ilI1li["log"](IIliI + I1llIi(800, "qXRN")) : $["waitTime"] = i11iiI);
-      } catch {
-        li1i1i[I1llIi(721, "^!J@")](I1llIi(751, "$Il9"), li1i1i[I1llIi(574, "9mpm")]) ? i1l1ll[I1llIi(695, "ReRH")]("\uD83C\uDFEC \u5171\u8BA1 " + I1iIiI["length"] + I1llIi(530, "PIJ5")) : console[I1llIi(584, "9h%U")](I1llIi(737, "qXRN"));
-      } else iliIII = iIIl1i[I1llIi(689, "Ab7u")]((IlIlii, i1l1i1) => !Iliil1[I1llIi(540, "]y5]")]["includes"](i1l1i1 + 1)), ill111[I1llIi(568, "eoFR")] = [];
+    let IIIIIl = $["farmInfo"]?.[lilIIl(609, "aX3C")]?.[lilIIl(452, "uK%F")] || 0;
+    console[lilIIl(634, "P(hT")]("\u76EE\u524D\u5171\u6709\u6C34\u6EF4 " + IIIIIl + "g\uD83D\uDCA7"), await myCardInfoForFarm();
+    const {
+      fastCard: I1lIil,
+      doubleCard: IIIl1i,
+      beanCard: liiII1,
+      signCard: IIIl1l
+    } = $[lilIIl(401, "]ovQ")];
+    console["log"]("\u5FEB\u901F\u6D47\u6C34\u5361 " + (i1i1I1[lilIIl(258, "A4yY")](I1lIil, -1) ? i1i1I1[lilIIl(221, "!SmT")] : i1i1I1[lilIIl(324, "fzI!")](I1lIil, lilIIl(470, "A4yY"))) + "\n");
+    if (IIIIIl < 10) {
+      console[lilIIl(280, "!Gq0")](lilIIl(236, "txF@"));
+      return;
     }
-    if (illIii["length"] > 1) {
-      if (I1llIi(675, "eoFR") !== li1i1i[I1llIi(726, "R7zK")]) console["log"](I1llIi(790, "tJ8k") + illIii[I1llIi(775, "SeZf")] + I1llIi(564, "pNiu"));else {
-        I1i11I[I1llIi(695, "ReRH")](li1i1i[I1llIi(699, "EUo4")]), llIliI[I1llIi(562, "F)pI")] = true;
-        return;
-      }
-    }
-    const ii1il1 = I1llIi(578, "PIJ5") + common[I1llIi(657, "ReRH")](13, "0123456789abcdefghijklmnopqrstuvwxyz");
-    $["UA"] = common["genUA"](ii1il1), $[I1llIi(824, "ReRH")] = common[I1llIi(541, "YZ9I")](ii1il1), $[I1llIi(539, "^!J@")] = common[I1llIi(462, "a@n6")]();
-    for (let iiillI = 0; iiillI < illIii[I1llIi(723, "]y5]")]; iiillI++) {
-      $[I1llIi(718, "bXr%")] = [], $[I1llIi(739, "Lh!p")] = illIii[iiillI], $["activityUrl"] = "https://h5.m.jd.com/dev/3pbY8ZuCx4ML99uttZKLHC2QcAMn/live.html?id=" + $["liveId"], $["lotteryId"] = "", await li1i1i[I1llIi(581, "ReRH")](sendRequest, li1i1i["IEDDL"]);
-      if (!$[I1llIi(569, "F)pI")]) {
-        if (li1i1i[I1llIi(599, "pNiu")] === li1i1i[I1llIi(639, "%cxN")]) {
-          i1IIl[I1llIi(825, "SeZf")]("\u5DF2\u8BBE\u7F6E\u8DF3\u8FC7\u8FD0\u884C\u5F53\u524D\u8D26\u53F7"), I1lll1[I1llIi(685, "qXRN")](i1IIi[I1llIi(571, "UpmU")]()), IIII1I[I1llIi(497, "ic&Z")][I1llIi(460, "LDu9")](Iii111);
+    if (i1i1I1[lilIIl(588, "He&s")](IIIIIl, 100) && $[lilIIl(351, "FAmv")]?.[lilIIl(611, "IKY3")] > 0) {
+      if (i1i1I1[lilIIl(400, "2O[G")](i1i1I1[lilIIl(386, "@o2C")], lilIIl(357, "a@Fw"))) {
+        let lllll = i1i1I1["vziOi"](i1i1I1[lilIIl(641, "a@Fw")](parseInt, i1i1I1[lilIIl(304, "T!#)")](IIIIIl, 100)), $[lilIIl(604, "QWFe")]?.[lilIIl(619, "BiiY")]) ? $[lilIIl(544, "cJte")]?.[lilIIl(508, "uK%F")] : i1i1I1[lilIIl(393, "A4yY")](parseInt, i1i1I1[lilIIl(497, "uK%F")](IIIIIl, 100));
+        for (let i11ili = 0; i1i1I1["zjAlY"](i11ili, lllll); i11ili++) {
+          if (i1i1I1["cKDPl"] === i1i1I1[lilIIl(279, "zLIJ")]) iliIIl[lilIIl(498, "I%Vs")]("\u5F53\u524D\u6CA1\u6709\u79CD\u690D\u65B0\u7684\u6C34\u679C\uFF0C\u6307\u5B9A\u7684\u7B49\u7EA7" + Ii1iIl + lilIIl(225, "&v(!"));else {
+            await i1i1I1[lilIIl(646, "cvWH")](userMyCardForFarm, i1i1I1["gxfgo"]);
+            if (i1i1I1[lilIIl(568, "A4yY")]($[lilIIl(288, "&v(!")]?.["code"], "0")) {
+              IIIIIl -= 100;
+              if ($[lilIIl(360, "t(FI")]?.["treeFinished"]) {
+                IlII1 = true, console[lilIIl(506, "haP4")](lilIIl(644, "Tc0m") + IIIIIl + lilIIl(628, "Ux)#"));
+                break;
+              } else i1i1I1[lilIIl(223, "AG^&")](lilIIl(397, "Tc0m"), i1i1I1["zaPSx"]) ? IlI1i1[lilIIl(610, "2O[G")][lilIIl(605, "&wJj")](l1lIl1) : console[lilIIl(323, "pOgc")]("\u5DF2\u4F7F\u7528\u5FEB\u901F\u6D47\u6C34\u5361\uFF0C\u5269\u4F59" + IIIIIl + lilIIl(306, "AG^&"));
+              await $["wait"](500);
+            } else {
+              console[lilIIl(421, "D@e7")]("" + JSON[lilIIl(269, "SFB7")]($["userMyCardRes"])), console[lilIIl(643, "S4Ba")](i1i1I1[lilIIl(562, "uK%F")]);
+              break;
+            }
+          }
+        }
+        if (IlII1) {
+          await initForFarm(), await i1i1I1["mVhRv"](autoCrop);
           return;
-        } else {
-          console["log"]("\u3010" + $["liveId"] + I1llIi(500, "pNiu"));
-          continue;
         }
-      }
-      await common[I1llIi(442, "9h%U")](taskThreads, cookiesArr, taskFnc), $[I1llIi(549, "&zDZ")] = false, $[I1llIi(780, "y00*")] = false;
-      li1i1i[I1llIi(729, "bXr%")](iiillI, illIii[I1llIi(533, "&5!E")] - 1) && console[I1llIi(616, "9mpm")]("");
-      if (li1i1i[I1llIi(698, "^!J@")]($[I1llIi(474, "R7zK")]["length"], 0)) {
-        if (li1i1i[I1llIi(717, "]y5]")](li1i1i["NHtUL"], I1llIi(454, "$tp%"))) cookiesArr = cookiesArr["filter"]((l1iIII, llI1I1) => !$[I1llIi(771, "ObUp")]["includes"](llI1I1 + 1)), $[I1llIi(595, "SeZf")] = [];else {
-          const lIli1I = li1i1i["EjMSn"](IlI1I, II11Ii);
-          li1i1i[I1llIi(492, "ipL6")](lIli1I, 0) && lIli1I !== 1 && (IlI11 = lIli1I);
+      } else i1iliI["log"](lilIIl(545, "!SmT") + I1iIii + lilIIl(296, "cJte"));
+    }
+    if (i1i1I1[lilIIl(517, "#0!g")](IIIIIl, 10)) {
+      if (i1i1I1[lilIIl(480, "]ovQ")] === i1i1I1["NSpQO"]) i1lI[lilIIl(603, "jPP9")](lilIIl(467, "]ovQ") + IlI1l[lilIIl(488, "FAmv")]?.[lilIIl(367, "sQ^m")] + "g\uD83D\uDCA7\n");else {
+        do {
+          if (lilIIl(278, "sT][") !== i1i1I1["cwstL"]) {
+            await i1i1I1[lilIIl(358, "C@S!")](waterGoodForFarm);
+            $[lilIIl(515, "jPP9")]?.[lilIIl(242, "@o2C")] && (IIIIIl = $[lilIIl(446, "a@Fw")]?.[lilIIl(426, "&v(!")] || 0);
+            if (i1i1I1[lilIIl(645, "KQyc")]($[lilIIl(268, "QWFe")]?.["code"], "0")) {
+              if (lilIIl(546, "9GV*") !== i1i1I1[lilIIl(298, "P(hT")]) {
+                if ($[lilIIl(597, "cvWH")]?.["finished"]) {
+                  IlII1 = true, console[lilIIl(353, "FAmv")]("\u5DF2\u6D47\u6C3410g\uFF0C\u5269\u4F59" + $["waterResult"]?.["totalEnergy"] + "g\uD83D\uDCA7\uFF08\u4F5C\u7269\u5DF2\u6210\u719F\uFF09");
+                  break;
+                } else {
+                  if (i1i1I1[lilIIl(460, "jPP9")] === i1i1I1[lilIIl(254, "AG^&")]) {
+                    if (i1i1I1[lilIIl(635, "2O[G")]($[lilIIl(409, "T!#)")]?.[lilIIl(370, "B[vv")], 0) && i1i1I1[lilIIl(478, "AG^&")]($[lilIIl(299, "sT][")]?.[lilIIl(533, "txF@")], 10)) await gotStageAwardForFarm("1"), $[lilIIl(477, "gUB[")]?.[lilIIl(315, "D@e7")] === "0" && console[lilIIl(541, "IKY3")](lilIIl(434, "cJte") + $[lilIIl(331, "uK%F")]?.[lilIIl(587, "txF@")] + lilIIl(584, "D@e7"));else {
+                      if (i1i1I1[lilIIl(418, "He&s")]($[lilIIl(445, "[7KZ")]?.["waterStatus"], 1)) {
+                        await gotStageAwardForFarm("2");
+                        if (i1i1I1["WbWnH"]($[lilIIl(627, "9HJc")]?.[lilIIl(364, "He&s")], "0")) {
+                          if (i1i1I1["KOEJS"](i1i1I1[lilIIl(286, "T!#)")], i1i1I1["GOnwm"])) console[lilIIl(643, "S4Ba")](lilIIl(348, "uK%F") + $[lilIIl(477, "gUB[")]?.["addEnergy"] + lilIIl(474, "haP4"));else {
+                            IliI11["log"]("\u6C34\u6EF4\u4E0D\u8DB3");
+                            return;
+                          }
+                        }
+                      } else $[lilIIl(446, "a@Fw")]?.[lilIIl(303, "gUB[")] === 2 && (await i1i1I1[lilIIl(472, "bg(6")](gotStageAwardForFarm, "3"), $[lilIIl(590, "Tc0m")]?.["code"] === "0" && (i1i1I1[lilIIl(547, "2O[G")]("CPbPz", lilIIl(385, "IKY3")) ? (Ii1iII = i1i1I1[lilIIl(321, "B[vv")], l1i11I = "https://api.m.jd.com/client.action?functionId=" + II11II + lilIIl(458, "k![b") + i1i1I1["dRASw"](Ii1iI1, lilIli["stringify"](Iliili)) + "&appid=wh5") : console[lilIIl(542, "2O[G")](lilIIl(240, "T!#)") + $[lilIIl(577, "SFB7")]?.[lilIIl(237, "#0!g")] + "g\uD83D\uDCA7")));
+                    }
+                    console[lilIIl(585, "sT][")]("\u5DF2\u6D47\u6C3410g\uFF0C\u5269\u4F59" + $[lilIIl(624, "Vwy@")]?.["totalEnergy"] + "g\uD83D\uDCA7");
+                  } else II1Il[lilIIl(323, "pOgc")](lilIIl(339, "Vwy@") + lilIlI["farmInfo"]?.[lilIIl(596, "C@S!")]?.["name"] + lilIIl(594, "qsKS") + iIIIIi[lilIIl(277, "zLIJ")]?.[lilIIl(398, "2O[G")]?.["prizeLevel"] + lilIIl(294, "cJte") + i1i1I1[lilIIl(334, "C@S!")](i1i1I1[lilIIl(304, "T!#)")](iii1I1[lilIIl(623, "k![b")]?.[lilIIl(609, "aX3C")]?.["treeEnergy"], II1Ii[lilIIl(319, "bg(6")]?.[lilIIl(592, "cJte")]?.["treeTotalEnergy"]), 100)[lilIIl(305, "t(FI")](2) + lilIIl(333, "0&gr") + i1ii[lilIIl(589, "B[vv")]?.["farmUserPro"]?.["treeEnergy"] / 10 + lilIIl(264, "k![b") + i1i1I1["VaCsG"](I1iIl1[lilIIl(327, "KQyc")]?.[lilIIl(229, "#0!g")]?.[lilIIl(448, "KQyc")], i1il[lilIIl(220, "T!#)")]?.[lilIIl(566, "IKY3")]?.[lilIIl(598, "T!#)")]) / 10 + "\u6B21\uFF09");
+                }
+                await $["wait"](500);
+              } else ll1iI += iI1lll[l1lIll["floor"](i1i1I1["ChkbB"](I1l1II[lilIIl(639, "@o2C")](), IIli1I[lilIIl(414, "P(hT")]))];
+            } else {
+              console["log"]("" + JSON["stringify"]($[lilIIl(558, "I%Vs")])), console[lilIIl(222, "0&gr")](i1i1I1[lilIIl(537, "a@Fw")]);
+              break;
+            }
+          } else Iliil1[lilIIl(353, "FAmv")](lilIIl(420, "]ovQ"));
+        } while (i1i1I1[lilIIl(492, "t(FI")](IIIIIl, 10));
+        if (IlII1) {
+          await i1i1I1[lilIIl(361, "9HJc")](initForFarm), await i1i1I1[lilIIl(486, "SFB7")](autoCrop);
+          return;
         }
       }
     }
-  } catch (II1il) {
-    console[I1llIi(602, "C9qI")](I1llIi(483, "ObUp") + II1il);
+  } catch (Ill11) {
+    console[lilIIl(563, "txF@")](lilIIl(273, "He&s")), $[lilIIl(266, "Tc0m")](Ill11);
   }
 }
+async function autoPlant() {
+  const ililIl = liiI1i,
+    liiIII = {
+      "Wqiai": function (iI11I1, il1i1l) {
+        return iI11I1 === il1i1l;
+      },
+      "woQlS": "YcIUT",
+      "eOdoA": function (IlIlll, IIIl1I) {
+        return IlIlll(IIIl1I);
+      },
+      "pSgEm": function (iil1ii, IlIlli) {
+        return iil1ii === IlIlli;
+      },
+      "nneGL": "HQIKF"
+    },
+    li1i11 = $[ililIl(527, "uK%F")]?.[ililIl(318, "QWFe")];
+  if (li1i11) {
+    const il1i1i = $[ililIl(569, "C@S!")]?.[ililIl(553, "#0!g")][FRUIT_PLANT_LEVEL];
+    if (il1i1i && il1i1i[ililIl(413, "sT][")]) {
+      if (liiIII[ililIl(251, "@o2C")](liiIII["woQlS"], "epGYL")) iliIII[ililIl(293, "uK%F")](ililIl(524, "IKY3") + iIIl1i + "\u7684" + I1lllI[ililIl(406, "BiiY")]?.["farmUserPro"][ililIl(308, "IKY3")] + "\n");else {
+        const i11ilI = il1i1i[Math["floor"](Math["random"]() * il1i1i["length"])];
+        await liiIII[ililIl(419, "IKY3")](choiceGoodsForFarm, i11ilI["type"]), liiIII["Wqiai"]($[ililIl(576, "I%Vs")]["code"] * 1, 0) ? console["log"]("\u5F53\u524D\u6CA1\u6709\u79CD\u690D\u65B0\u7684\u6C34\u679C\uFF0C\u5DF2\u81EA\u52A8\u79CD\u690D\u7B49\u7EA7" + FRUIT_PLANT_LEVEL + "\u7684" + $[ililIl(449, "SFB7")]?.["farmUserPro"]["name"] + "\n") : console[ililIl(572, "&wJj")](ililIl(415, "A4yY"));
+      }
+    } else console[ililIl(572, "&wJj")](ililIl(407, "t(FI") + FRUIT_PLANT_LEVEL + "\u6682\u65E0\u6C34\u679C\u53EF\u4F9B\u9009\u62E9\uFF0C\u8BF7\u6253\u5F00\u4EAC\u4E1CAPP\u68C0\u67E5");
+  } else {
+    if (liiIII[ililIl(399, "&v(!")](liiIII["nneGL"], liiIII[ililIl(519, "!Gq0")])) console[ililIl(260, "@o2C")](ililIl(281, "IKY3"));else {
+      IiilI1[ililIl(551, "]ovQ")](ililIl(371, "2O[G"));
+      return;
+    }
+  }
+}
+async function autoCrop() {
+  const liiI1l = liiI1i,
+    llllI = {
+      "MDrOi": "\u3010\u63D0\u793A\u3011\u8BF7\u5148\u83B7\u53D6Cookie",
+      "QqJfx": "ZBPUg",
+      "TkMna": function (i11il1) {
+        return i11il1();
+      },
+      "hxgpG": function (ii1iiI) {
+        return ii1iiI();
+      }
+    },
+    lllil1 = $[liiI1l(623, "k![b")]?.[liiI1l(636, "QWFe")]?.[liiI1l(349, "D@e7")];
+  console[liiI1l(463, "BiiY")](liiI1l(326, "T!#)") + lllil1 + liiI1l(375, "gUB[")), await gotCouponForFarm();
+  const iil1il = $[liiI1l(431, "IKY3")]?.[liiI1l(287, "cJte")],
+    ilil1I = iil1il?.[liiI1l(379, "k![b")];
+  if (iil1il && ilil1I) {
+    if (llllI[liiI1l(600, "pOgc")] !== llllI[liiI1l(441, "#0!g")]) lilIl1["msg"](i1l1ii[liiI1l(514, "I%Vs")], llllI[liiI1l(366, "pOgc")]), i1l1["exit"](1);else switch (ilil1I) {
+      case 200:
+        const ilil11 = iil1il?.[liiI1l(376, "He&s")]?.[liiI1l(335, "cvWH")],
+          illlI1 = iil1il?.["hongBao"]?.["endTime"];
+        console[liiI1l(586, "qsKS")]("\uD83C\uDF89 \u6536\u83B7\u6210\u529F\uFF0C\u83B7\u5F97" + ilil11 + liiI1l(505, "txF@") + $[liiI1l(338, "k![b")](liiI1l(373, "A4yY"), illlI1) + liiI1l(510, "fzI!")), $[liiI1l(614, "@o2C")][liiI1l(271, "cvWH")]("\u6536\u83B7\u6210\u529F\uFF0C\u83B7\u5F97" + ilil11 + liiI1l(346, "FAmv")), await llllI[liiI1l(247, "qsKS")](initForFarm), await llllI[liiI1l(571, "P(hT")](autoPlant);
+        break;
+      case 409:
+        console[liiI1l(444, "bg(6")](liiI1l(410, "T!#)")), $[liiI1l(640, "I%Vs")][liiI1l(388, "fzI!")]("\u5DF2\u8FBE\u5230\u9886\u53D6\u4E0A\u9650\uFF0C\u8BF7\u8FC7\u4E00\u6BB5\u65F6\u95F4\u518D\u9886\u53D6");
+        break;
+      default:
+        console[liiI1l(342, "A4yY")](liiI1l(626, "k![b") + JSON[liiI1l(438, "2O[G")]($[liiI1l(245, "BiiY")]?.[liiI1l(362, "haP4")]));
+        break;
+    }
+  } else console[liiI1l(425, "Ux)#")]("\u6536\u83B7\u5931\u8D25 " + JSON[liiI1l(380, "jPP9")]($[liiI1l(436, "cJte")]));
+}
+async function myCardInfoForFarm() {
+  const i1l1II = liiI1i;
+  $[i1l1II(575, "uK%F")] = await request(i1l1II(387, "IKY3"), {
+    "version": 5,
+    "channel": 1
+  });
+}
+async function userMyCardForFarm(IIIl11) {
+  const i1ill = liiI1i,
+    I1lIi1 = {
+      "wRqBf": "userMyCardForFarm"
+    };
+  $["userMyCardRes"] = await request(I1lIi1[i1ill(403, "&v(!")], {
+    "cardType": IIIl11
+  });
+}
+async function waterGoodForFarm() {
+  const I1l11l = liiI1i,
+    liiIIi = {
+      "mMASJ": function (lil11I, Iliii1) {
+        return lil11I(Iliii1);
+      },
+      "MlAYM": I1l11l(581, "Tc0m")
+    };
+  $["waterResult"] = {}, $["waterResult"] = await liiIIi["mMASJ"](request, liiIIi[I1l11l(526, "haP4")]);
+}
+async function gotStageAwardForFarm(iIiIi) {
+  const lilIIi = liiI1i,
+    iil1ll = {
+      "wHpAw": function (iiilil, iil1li, lillIl) {
+        return iiilil(iil1li, lillIl);
+      },
+      "vnGvr": lilIIi(461, "S4Ba")
+    };
+  $["gotStageAwardForFarmRes"] = await iil1ll["wHpAw"](request, iil1ll[lilIIi(248, "BiiY")], {
+    "type": iIiIi
+  });
+}
+async function initForFarm() {
+  const i1l1Il = liiI1i,
+    iIiIl = {
+      "KUZnR": function (iiilii, li1i1i, IlIli1) {
+        return iiilii(li1i1i, IlIli1);
+      },
+      "csBLP": i1l1Il(332, "cvWH")
+    };
+  $[i1l1Il(220, "T!#)")] = await iIiIl[i1l1Il(591, "zLIJ")](request, i1l1Il(531, "A4yY"), {
+    "babelChannel": iIiIl["csBLP"],
+    "sid": "",
+    "area": area,
+    "version": 26,
+    "channel": 1,
+    "lat": lat,
+    "lng": lng
+  });
+}
+async function gotCouponForFarm() {
+  const illIiI = {
+      "NLQcw": function (Ill1l, llI1Il, ii1iii) {
+        return Ill1l(llI1Il, ii1iii);
+      }
+    },
+    lI1lli = {
+      "version": 11,
+      "channel": 3,
+      "babelChannel": 0
+    };
+  $["gotCouponForFarmRes"] = await illIiI["NLQcw"](request, "gotCouponForFarm", lI1lli);
+}
 function Iii11l() {
-  const iliIi1 = function () {
-    return [...[iｉl, "yHjHpstVjIiuSLarDhmTHiPK.RUcrNoqmKKO.Vv7==", "WQjzW7xdO1pdHmopoCoLvq", "W4tdQmkpW4T1aCk6WPa+W4KKh8oHW7dcSW", "k8onWOS0nq", "WQ8wFhvOk8oTW5C", "amkHW6pdHCoZ", "kCo8WQ4", "W580urFcLG", "lSoQW5ZdOmocW7DZW57cOmkByCoXbG", "5P+N556/5RAP5yQN54IR5OoA4PYS", "uJJcKfNcR8onW6fzWQq9WOW", "ifRdM3xcLG", "WQ3cPCkyWOuU", "WPLEW73cMLBdPNnPs8orW5vVWRhcKmkJv2NdMtC", "jNxdPJJdKW", "l13cI3BcRbHLWPpdPXxdGI7dPea", "sqCWWQlcPrO", "WOZdUrS", "W63cMYzZWReZDSkzn8oUFb7dILFcSmo2W4m", "rxVcJHFdVmkV", "W4BdK2vija", "W4nRcwldRG", "cLldKfzF", "WQS7W7X8W5hcVGNdMmkU", "Bq0QWPZcHtDSWQfxgwdcPW", "WP/dTmonWOfj", "5P6A55635OQ95Asp54Ik5Oo/4PYM", "r8onFSkGW6bCWPa", "k2JdJwHyW70", "W652sgZdMq", "qG0J", "W7pcKsa", "WPpdGComWR93", "W4pdUSoVv8oU", "WR4znupdSHq", "WR/dPIK", "vb/cVmo5", "W5lcRJpcHSkGACoIW7u", "W5JcL8ojW4dcIG", "W4NcRbrfW4FdSSkk", "W4/dOSkg", "W43dRLfFaW", "iCoZWQG", "W4hdJbhdISon", "W4nAgvVdIW", "W63cIYLAWOaZ", "W4JcMYTBWR0", "l8k3W6ZdOSopWR0", "W4BdO8kx", "WOKGrspdPCkCdW", "WQFcQ8kv", "W5pcKmk5W6tdQmkZEG", "WQVdQhVdJcm7W6W", "WOKFwHdcVJHMbGvyBLZcGq", "q8ozWP7dNga", "W7pcGCkbW7tdPG", "eeKiwCkZtSoHDtVcTCoA", "lmo8WQ0EcSoUW5r4W543W5O7hCk1W7m", "WRldNCoeWPTM", "ucdcOCoEWRa", "WOHgW6dcGeRdPW", "WPLCW7ZcTG", "xLXTEMG", "WOhcNalcTSoDWPZdLmk3r8kTWRCeW4KDWQqCFmkoxmohCG", "W7xcIY3dHmkupCothSkMcmkUW7XOWQ3dRSkL", "c8otxCkqW7m", "W6/dQdtdHmoE", "nhhdPee", "u25wFKSt", "W7xcRSoPW5K", "W73cJtxdHa", "W4JcVZFcJf4", "W5zmymkyWQ58la", "W7b1qW", "WPBcTapcUmol", "44gj5O+j56En44oB6k+n5ywf6iYT5y6PmSk2y0VdQ8kr", "W5ldNSoYW7jiWRhdMGJdNbr2", "WQWCqhv0oCoTW6GUlSkuWQP9W6hdKIxdR8kc", "AwXL", "p33dUvdcRq", "W7ddIwv0iCkGDmkzkSoIW4ScWPpdR3ZdIJVcS3zuW58", "W6ZdJx3dPSo7zmkSvCoVWOuZWRD0W4NdU8oCF8kAW7hcJ8kiWQ0SWQpcUmoOrItcT392CCkgEmkLWQeVrCktW4CzWRRcN8kDWQq", "4PQoqUIgRUwTSUs6QEI+IEIHLoMvUoMAL+AwLUMvR+ITVoE9NUMxMUIUOG", "WPRdO0pdUYm", "q8o8WORdRL5d", "g13cPLxcQq", "WPJcMa7cPSoBWPddLmk9", "oK3cKx/cRrS", "WP1dW4xcLKS", "omksW6ZdI8o/", "ESk8WP0", "W57dTL5Jja", "WQeZW6rQW5tcVW", "W7hcUcJcKxapW4LoACkZoa", "AwP0lwpdVq", "rWW3WO3cKI0", "W7dcGrNdH8k0", "WQmwAq", "iSo8WRa9nmoIW4XPW7m", "u2rmBvOjW4WgWQu", "WONcOSol", "W45CE8kO", "kSkXW6ZdPCokWRBcPa", "WO1VpwtcGCodscXKWRm", "W7VcNZn+", "kuddQrldRa", "W57dGYLqkbe", "BSkYW7q", "ghpdVgXuW73cOCowWOBdO8kKmq", "WPXyW53dVGW", "DSoBosRdKqm", "WRiubLVdVHblW6BcO8kEW4xcOCkPgXpcVIr4W7tdHCkH", "W5xdQfTqjG", "WPNdIwVdKHm", "dxBdIrhcSSk0W7jjWOKxWOTkW6VcPr/cVYS", "W6RcLZJdGSkWlCou", "W7nJqwhdV8o2yCkMWOZdKazNWPddLhvvW43cScHqCq", "WQe1W7u", "W4hcVbraW4tdVmkgvmkvW5yUjmoYgW", "W4mVsG", "WPzwW6dcOLddQW", "WQrDW6a", "WR3cTmk3", "W6hcOmoYW54", "5P6855YK5RAG5yIc54M95Ooy", "D3zSdutdVq", "W4NcLa3cGgC", "d8okxSkOW4ThWQ/dUgaJW6C", "5l2E5zof566x57UP5lM16ls0", "8lU4N8kn"], ...function () {
-      return [...["W5BcLahdKmoCW7G", "W7xcJtW", "WOZcH8kaWOmZ", "W7FdJmoeBq", "tx/cLbe", "8jwFSSoa5ysb6kYPW6C", "W5KXqJ/dNq", "WQWCqhv0oCoTW6GUlSkuWQP9W6hdKIxdPCkfW54OjGtcPxZcLGBcG+IeOUwURUs7IoI/OEIIKUMxNoMBJUAuQoMwNo+/S+M7NEIVMf4JlG", "WPVcSCodA8k4WONdISoUW6mGqvy", "WQrzW6pdOb/dGSog", "4P+5W5VMNyxNNzBORyRMS47dUW", "W5G3yt3dMCkmbG", "a0ldKZNdLW", "tmo6WPJdRG", "nSoOWRalfSoJ", "5PYe556h5Rw/5yMa54Mw5Ogy4P2l", "bMpdHW", "W47dOSk2W6T5", "phJdVxvR", "o0pdMtpdLG", "5P+5552S5OUZ5AsW54I15Og44P2g", "5lQ26loY8kIXMq", "C8oAlqRdKqu", "WONcGmkIWQGnWRhdKdO", "cmo/WRpcQ8oA", "W7BdHeX9bmk5zCkHimoKW4y3WOddUeBdLGtdRaamWOhcPCktha", "WRTzW6FdSGZdGCo3oCoNxmoy", "W5q0uGRcTgK", "eSoqt8kUW5XmWPpdG3y", "f8oiWOJcQCoT", "W7FdLsddGSoZACk+dmofWQrMW6KXW5xcOmklBCozWRRcO8k0W7TWW6VdUSkQgMBdTgP6oCkQ", "rWxcOCoYWOJcSq", "W6/cHWRdTCkp", "5Bwu6k+/572s6lA86lYD6l+D6kcA5BYQ5yIK6lwA5y+V", "nKq4W4hcKW", "5P2i55+j5AsP5zo5W6K", "AoIVJ+AYVEwKI+I3PL/INPddNq", "WRNcOaVcL8oF", "WRBcRSoEmCkWW5xdMq", "W6NdImkI", "WPXAW7y", "rhVcKWpdQCkGWOS", "8kMQT8kY", "lfNcI1S", "Du57", "nN/dRG", "rayBWOtcIs99W4bSfgtcP0lcUHlcIbBdTKb8WPldN8o5kCk+lCo9W7JKUitOSOVKVOBKUkZLGlxKUzdOT77VV4JPURtORA8h", "Fmk9WOxcSmkHWQaWW6y", "dmokvCkFW5DA", "W4iGsc4", "tgPvFbiuW4CMWQycDW", "D2z1kvJdVCkxWPRdVCoxWRm", "WP3cPmoeemku", "o8k5W6VdSmoYWRpcSmok", "W7ZcKI/dM8k9", "WORcISkEWQGrWQpdKaxdHJzKwhVdI8keWOtcNSkOWPHEWP3dUCoWiq", "W6ldRSkvW7bIbSkQWOy", "hsVcKcddU8keWR0Z", "WRRcP8k0WQmk", "WRpdS8oZWQfX", "lSo5WOeIeCoXW59aW7aGW5OxaCkQW4msWP5GW4pcO8ojW68", "l27dP30", "W6ZdHaJdGSo+", "W6/cVsfSWQq", "yG0WWPZcHsTH", "W4aNCZe", "nNNdV0hcKf7cK8kvW6GWW7ewW4ldNSk4tmoxlfRdHW", "buKlCSkeyG", "WP7cOmoEja", "yNPblK4", "bCo+WQONdSoUW451", "eSonCmk1W7G", "W7GeWQBcPuBcLCoScmoQsCoOWRa", "8jIPUCol", "4P2ji+ACQoIcTEATIEEJT+wNHEEtVCkX", "WPldQJOpW7uqyCo7", "FSovkG4", "W4ZdMsjbmdBdNSk1WRfRW65ChYTHW5yVW6Co", "celdQ3tcGq", "W4lcGXRcI0FdKZfvWOtcQSkOWQiOeSkmdSomW7fBW7BcNW", "ivRcK8kbxa", "nSotWOKVdW", "B2DDjepdR8kKWRFdVSowWQjjfM7cJ8kvWRpcTw89W50OW7m", "55Mx5PcG6zsvW5bq7721", "W4JdSCkzC8oLW4pdJ8olWRGvsa", "W5hdLSo3W7jaW6xdUHhdKdTfua", "ACkeW4ddQmk8WPKwW6HjWOZdPG", "WRiubLVdVHblW6BcO8kEW4xcOCkPgXpcOcjIW5VdISk0WQGeDJ7dQ0D86lE05y+4vCoXWOdOV6RMUzFVVlRLPBRKUPhNL44K6l6K6kc15yIN5yMF", "4P+rjUIeVUACQEI9VEIJN+MbI+wlUEs5VoMwRoIUQGi", "5zY+5z6s5Rw85yQB5lMe6lA05lISWRK", "n8oEWPu", "8lkjKe8", "WP/cR8oC", "smoWWOJdGvjV", "WP1wW7RcLK3dPhK", "5l2C5Og95yUM8kY2QE+6Ia", "W4tcS8oFW73cUW", "W5f1ESkuWPC", "WQRdUmon", "W7BcLY/dP8k5p8oa", "W4Lwzq", "W4JcHWVcJG", "W4JcVavNW7NdTSkauSkgW6umj8oOfx4fEW/dTYTi", "4PU5oEISGowgGUwUOos5How9N+INVUEBTEEnTUwIJ+wpUoMfJEwtUUweVoI9VUIHLEIgIoAFRq", "W4jaqCk9WQu", "44oX5REv5yMP5lUj5AYG5z+95OQJ6i++5y2/5Rw55yQ45l+C5OgM5AAd6lE+", "W7pdNSkcW71t", "wMBcOH/dIW", "W4vnr23dVW", "WRpcS8oYhCkN", "jLNcKL8", "WQhdSSoEWPLAA8oEFhddMa", "W7RcJWFcJKu", "W7ZcPCoeW4BcOSkVkJhdUSkFDCoBW7e/WQhcI8kxqmkhD1astaqu5PIN5zc96yco552AySouvCoWWPKIe38ty8o0rU+/N+M7GUIVN+s6KoAoRUMdOa", "W7LVW6jFW67cMcZdVG", "WRHjW7xdOqFdTSoxiSo6xSoAWOKcWO8qWPxcU1bS", "W4JcRbNdR8k7", "WRSrlvtdVW", "WOlcNbtcOCoUWP7dNa", "W5RdNbBdT8ox", "WOFcMbtcGSo9WPddL8kSCmkRWOaIW4GqWQi", "W7/cIYm", "W7tcISowW6tcRq", "WQtdT3pdMgPPW7TYEmkqhghcHsVdGmovW4q", "4PQoqUIUS+wgOowTUUs4Kow/NEIKJEEAH+EpJ+wIK+wmMUMhV+wtJEwhGoI8QUIGV+IgM+ACJq", "WPldKSoSWP7cSCoLk1ddT8kkWQKtW6e", "WQW0fJdcNmkJp8klWRtdHGTnWOW", "W4BcJGZdKmoyW7/cQa", "WO/dOWJcOCkctCo3", "WQhcJcpcNmov", "WQ/dUCozWRfnBa"], ...function () {
-        return ["fCosWQdcGCoH", "WOtcJ8k1WQu", "W4ddQXRdMCoa", "W7zQESkwWQS", "oUs6NUA1PEwlH8kP", "W4XHvftdQq", "4PIYWPtOHyFLROpKU4NOVPFOOAFPLPZPM6hML67PLBJOR4FNV7lPLytORAa", "W4OKuIJcRMu", "j8kaW6ddHSob", "W6BORAdMS6JLP6xOTjO44PYXpEAxT+wrSow6PEAwGoAnQq", "6lwU5y+p5PsF5PwY", "W6ZcPYNdJSkx", "kCoUWRK", "W5ZdObG", "uw5DFw0EW5GGWRCowSkSW6NcRdlcRCkbfbeycW", "WQeDA1nyda", "CCkTW64", "j8oLxSkXW5S", "W4RcTGC", "lfFdJg7cSq", "WOJdM8oDWRvo", "5lMZ77Yv5lU66lsBra", "WQddV3/dItiS", "W77cOmoOW7RcUCkWiqNdLmkiDCo3W60GWPe", "44oi6lww5y6U", "W7NdKctdQmo2A8k4", "phNdPvdcSv4", "ggldHXJdLG", "4PYiWR3MN7tOGRpMRjVNO6NLPR7NKiRcVW", "5l2u5Oc45yQ6", "5Ass5zgC5lUq5OoM5PkE6icU6ik26l+l5lIz", "emoEWPaBhq", "W4RcSrBdVq", "56Mu5Rg28k6rGa", "W7JcLHZdPSk9", "WOBcH8k5", "kwNdVf1FW7C", "n3pdTq", "W4dKU4tMT7RLIAXY", "WRFcSSk8WOHFW58", "B2DDjepdR8kKWRFdVSowWQjjfM7cJ8kiWRxcS28UW486WR8CiCoK5O+N5yQP5BQX5y6P57In56Ic5PAH77YX6BI46k+9vo+/OUADG+wKRhBdLa", "WO8zC1Xw", "W7ldHxz1p8kQBCkcoCo1W7e9WP3dQNddGYtdRciaWPu", "n3pdPMXuW6hcRmkYWRy", "WP3cOtFcV8oj", "WRBcVSkKWRvuW4etls7cT8o/WPZcOmopWPNdQa", "W7ldGx50", "W4nqEG", "W7pcSatdGSoy", "W6tcJCoZW5VcGa", "yZaoWRVcMG", "qmo0WO3dGhK", "Cmoqaq", "m3/dUNVdOaldGSomWPq", "WRhdUhtdRsGT", "W5NdVSkVW4bW", "oe3cJfi", "W53cKdRdLG", "C8k9WOW", "l3tdHdddMq", "W4lcVXBdQmkcWPP/lca", "W5NdJtns", "WQldTSoEWRu", "omoEWP/dV8k5W6LWW5nlWRRcJCk1hW4DhSkIW4/cRq", "rGCLWOZcHsTR", "WQOxEa", "D8kMWP/cO8kgW7TSWQlcL8k9E8kthmk0W43cI187W4hcU8o0W681na0FcmoJWRBcJCkzg8o+BW", "WOBdVWq", "zWVcN8o3WQq", "WPrwW6VcOxBdPNPztCovW7vRWRVcJ8kvqehdNJ3dL1q", "jfFcMa", "4P2Zk+IeOUACTEI/R+IGT+MdSUwjV+s5H+MvSUIVTSoj", "WPzCW6K", "WOlcNCk7WRa1", "W4hcGWZcNhtdKtK", "t3NcTrVdQW", "WPBcRSon", "dKujxCknrCobAcRcQ8ogW4ZdI8kZWRu+pCoxW5eMfa", "6i+/5y+U5REe5yQs5lYI5Ocq5As96lEy", "oKmDW4i", "E8o2WPddMxm", "WOxOR47MSydLP6ROT6q44P+vsoAwO+wrH+w5UoAxKoAmNG", "W5xcJmooW7dcPq", "W5hdIINdU8oT", "W63dRSkZW4L/", "W4tcKGVcN2BcJhmvWPpcV8kcW6mQv8kpd8kRW7XqW74", "WQZdUg7dRIOOW7G", "E+IVQ+AZKowtLEw6PCkZ", "lwVcNSkN", "pSojWPVcPq", "W5NcLaG", "WRhdTSodWQbRCCoaEa", "WRNcVSkXWPHFW58j", "ta0RWOtcHtH2", "AsddHflcSxxcS8k1", "W5VcRbnoWOu", "DmovmWO", "5AE15zgm5lUV5OcX5PoY6iog6ios6lY45lUv", "WRWPW4jxW6K", "WRqzl1ldKXrpW53cGmkfW4xcSmk+edxcHNO8WQZcKq", "xrCMWQVcJZ19", "e1KAsSkZu8oWBJ3cTSon", "d8okxSkOW4bTWP7dUhSIW7jhftzMW6NdVwddQW", "WQnFW5/cOe8", "AmorlXRdHGir", "W7RcQshdPmoB", "x0LukL0", "mx0sW7BcPq", "kmoYWRK", "W6ddQCoIW4KlWP1jaqxcH8oEWRFcPW", "WPdcM8kYWQW", "u2rF", "5y6Y6yEd6k2u5PMVWQpcQCkReCosrSoxa8kZWRq", "WO/dMuVdVI4", "W65iwmkQWQC", "W6BcGcVcReC", "W4/cMatdSmkl", "W7FdSGxdJCon", "W5eGvtVcJMq7ha", "c8o6WR8fmq", "W7RcJt/dHa", "WOpdUqNcL8kbqSotW69FWQu4tKZcO8kL", "WOZcTq7cVmoT", "W4NcHSk0W4NdHSkLELW", "W6n1W7HRW57cTbddLSkRmq", "DSoBoq", "5lMw6lkh5BkL5lUl", "tqeXW4pcT3VcG8oG", "q8o6WPS", "BmkMWORcP8kaWRi"];
+  const II11l1 = function () {
+    return [...[iｉl, "OnpjstPjWUiQaNUmFik.duhcgyohSmrDY.xPdvD7==", "xGldThW", "WPddSCoIW5XhWO7dHCkKih4F", "W5ffWRFdSSk8", "WQ5uBSkZbLG", "yCkxavxcVa", "W63cTSoGBI0", "l1XJctm", "mmkwbvFcVhDYEMhcMSkrW4m", "W50VWR8", "m8o7WPGSW4pdRmk0W6On", "W7eim8o1vWZdTq", "WP9mq2BcKW", "5Q2P6l6u6z6h", "W6jpkW", "B8ojuYhdUZu", "WQpdO8o1W4nCWPZdJCkZ", "WPPTkx7cLmoXEclcU8kdgG", "W7b0yCk4W5yGWRxdNCkp", "W4VdV8kbWPtcNW", "pr/cQt9Sfq", "cwrVsuO", "5lIJ5yQ45OIJ6kgR5B+c5BU9776P6kYZ5QcQ5PYl5OUl6kkh5PwT5B6d", "WP0qWOlcQSoY", "WPyvWOy", "5lUQ5yMd5OQB6kcY5B685BMM77YD6k+P5Qo/5P+45OMq6kk35PAS5BYH", "WRhcTSotESo6qqtdUW", "dahcKSozW5e", "WOtcR8oQyCoW", "W7hcSNG", "5B+V5yM35Rcn5PYk5y2356EL5Qw555I65RkV5PYi776M5y6F6icP5P2N5P6J5Bwt6Agl5yYc5lQq5Q6B57MO5y+e6lYl5yMk5lMA5lUM6zIX772A", "WP/dVw/cNCkPW7q3WRSEtK1XAq", "WPpcTLRdNwy", "W4bpbZ7dR8k1B3q", "W7dcMdRdQgi", "WPeUD8kbWQm", "mq3dK3fMW7uBWQFdOSkvFZje", "uXJcTSoWdSorySkoex/cQI02", "rSoZW54YW4XAW6m8W4b0bLK", "l2jegW", "hCkYWQzIWRm", "W6eRDXldTa", "Bmk2W68", "772v6l655BIB", "cunbpSkp", "pVcNSjO", "oxTyha8", "WR/cJ0/dGwS", "gsJcI8oDW4NcHSoExKTyta", "W7dcH3H5WQm", "W78yf8oKwa", "v0Ho", "WPFcVuddMurrW6uIW5hcKKy", "WRizxSkEWQi", "FNddTCoCWRFcQGC", "W4/WL6gd", "WQRdHsddUMW", "W5jBW4fM", "FX5KBri", "Fv8mW6aRW7pdNqW", "WQjHlghcRW", "W6xdPSk+WRpcM1VdVeC", "W6zYyCk+W4O", "WRFcIvZdNui", "W4/cPtRdIW", "iCkIfJNdUa", "rmkrWPKmW7a/FhS", "WOTTl3BcQSogAZtcOSk4b8oTh8kIW4arWRW", "ddO1lSk0bxJcGa", "W71qWOhdQmkftSo3W5K", "WQ9Cr8kPWOi", "W7tdKxJdNgW", "D1ez", "rqzcqY8", "5Q+c6l+P6zYJ", "8yQTKJNLVQxLIOpNPktMPidNMlPW4OgA", "W77dHMFdTetcPSkZWO4", "AmoUrGBdJq", "W43dGmkNWQtcOW", "wgzVW4mKstCoj8ozWPe", "z8k2W7XcW5zzW6JdRgnzWOiHW47dGSkdWRFdUb8ucGRcOfC", "yupdQa", "uo+/J+w0NEA1HUAZJq", "EbldTMOS", "mbJcQtLXfbpcOG", "mmoUWPGKW4ddUa", "wCoTW5ddVCoaimo1qCoP", "pcxdQJK", "5B6q5yQX56E+5Qs2772t", "tWJdUg0RmaRcQCoUhW", "BwxdMSofW6pcQWzlWOFcG8k6WQpdSComoW", "m3Hq", "W6bHz8kYW5a", "WPTOW5zceW", "W60fimo6W4GIzSoJqMGrW51T", "57Mb5yY08jEuMG", "jSk7W6D1W5Sf", "5P6C5Qoi5B6i6iQG5lIK77Y05AEz5yI4", "W4lcQZpdIW", "WRNcTSomCG", "WO5iymkCzmkIWO1nWQxdGbHLDa", "WOreW7xdOGa", "WO9Era", "mCkvbfxcShm3wMpcOmkHW7RdKa", "lctdR15T", "WReZkSoJWO4sWQJdJ8kKzYS", "zCkHWPGkW4W", "EHBdVeaH", "DCkAWRSwW5i", "F2ZdLSohWOlcTIbmWPNcHSkCWQpcRG", "W5ldJCkCWQFcTq", "mSoMWPKUW7NdOSkTW78", "WRZcQLxdV8oA", "WRT2iei", "WRWPFehcPG", "vNOmW4il", "WPFdTmo0W7r8WPJdKSkXcq", "W4rmWOpdN8k5xq", "W6ZcT8k7zs/dNZqsAJ8f", "WQHxzmkUWOnfimolqvyb", "6lE45y2Z5PwI5PsF", "wYfNqr7dSLKVsCoydmkZWR9Y", "jM5ocLdcIcWye8kPW5hcMSkxbhW8W7xcT8oj", "WP5mWOvNFG", "4Oo8W7ZLT4BMIQZNHQK", "WRb2kKdcGSkKW4O", "WQvJDSk0qSkzWPnIWPFdQHHjsxNcJCo+WOf+z3pcSCk/5O665AYPWP3cUSk16lwr5y+o5RAb5Roz776l5AAy5lMg55E7jmkoDUMBJow/QG", "n8kFW5O7W5tdSMeVpmoBWQj7WQ/cT1GOWRddNCkOW43dVwpcPHPRECog", "oINdTcNdVSkLidrLnW", "WOLDW49OkeFdSL/dIa", "W6/cTSkXyYZcVhDEavSmW5JcQSkjuCkEWQ9GW6vGW6OedfyFWQlcKrPtW6/dJZvCWQiHhG", "W7lcI3boWO8", "W5ugemkCjG", "gh1ucWa", "W7T0W79TW50", "W5a0WPy/W68", "W5fdW69IW6PmpCoqW73dU8oOh8kMdCokW5pcOa", "wdX+tq3dQW", "WOnLpNdcQmocCdq", "da/cHSo+W7i", "5O2t56Eg57Uq5PYHvc1Dp8kxkSk7W49DFq", "6lAa5y+z5PAv5PsB", "mMv7obS", "W5fVbIRdGq"], ...function () {
+      return [...["W7zWD8kWW4WIWP/dLmkyrZBdVCk9", "WOBcVuFdIhvJW6mN", "yCoGtsldGa", "WRJdPCoWoKZdUsuuAbKs", "vJJcTmohlG", "WRNdKCotjgG", "WP1/W5FdOJ/dSCkgj1ifw8k+Aq", "W6tdSvJdUSoEW7jmgCoZW4y", "utNcOSoajq", "r17cSSk7ia", "eCkIWPTG", "jmkPkqRdI8oQAmohc3JdOSkrFmktWOzaf8omW67dR8kW", "5B2z5yMs5Rcs5P6856sc5QEc5PEt55QP5RoF5P2+77+c5O+b5A2h55IQ56Ya57UQ", "WQTEcflcSSo8sHdcMSkQpmokfSkkW7aLWOBdIq", "WQeaBCktWRZcU2JdJsuRaq", "5B6f5yIS5BER6l2i5yU+6AgV5y+B5lQ06zIa772l6l6Y5lUR5Q2L5PAb6zEI5ysu6Aoo5y+j5zcdqa", "W7BcM3qzlq", "W4VXJBo5", "aIZcKCoFW4/cVa", "WQNcM2ddRhDi", "5BYm5yMA5Rkw5P2656AW5QEi5PEr55QX5Rgd5P2r77+95Bop6kYk6iEu5yQ556AC5QEc5AE16lAF772R6k+r5OIY5B2p5lUs5lUqnCotBoAkKEwkU+wYU+IVUG", "W7adWPCRBaRcSEw8UEwLUUoaRos5Pos7IUI0H+wnLG", "wNRdI8kpWOpdOCkjhM1zsmk2W5xdTa", "WR9mfvtcSq", "W5L1W4HSW5K", "5B6J5yMl5Rc15P6k56Aa5QAy5Pw/55Un5Rca5P+277Yf5Bog6k+p6iAP5yIc56w45Qsz5AAO6lsR772a6k6q5OMm5B2h5lII5lMtsXrI5OQK5yMo5BoG6kYy", "W4dcPtK", "WP/cKColxmoc", "vwSrtGVcKrpdH8k0dxO3WQRcMSkrBq", "WQ0VzSkLW5eRWQ/cLmkKvJhdTSkLWPORdgBcTmocWPRdPMJcKq", "fYSd", "uGtcP8oJl8oTt8kkexZcGq", "WRvqymkouq", "hcFdSeXL", "W70fWRapW5S", "lCoUWPO", "W5TvW5HaW7DDbmorW7xdKSobaSkskSozW4ZcN8kXW4C", "vwq/ECkv", "W5hdQqpcJauWWQqmW4dcIMefWRa", "5P+f5QgZ5y2S6iQR5lQc776y5AsI5yMe", "rCkGW58WW4K", "pG3dIvvRW6eeWPRdQCkGzsX2DHJcRu7dLeS", "W45cWPBdT8kExmo/W47dRCkiW4W", "WQ3dSmoWpNFdRsKaqq", "jHtcQY97eGK", "W63cLwavj3enzW", "FmoUW7/dVSoR", "b8kMWQPdWO8", "WOijW47cSmoHbCkq", "bJqG", "W5fpatBdLmkjBgH/FCkN", "zSkdWOGBW4WmDg1kCum", "cMfmpG", "W6ZdLxddVfNcP8kHWOakW64PswpcVIi", "W6bOFmk4W5SIWPVdLmkzvYddLCkMWPSYb3dcMSo/WPldUa", "77+p6lYN5BQv", "WQVcN2pdRG", "Dmk2W7XWW459W6hdRfbjWPO", "lrddMhnxW6avWOhdOG", "bIlcRmoAW7a", "WR98kNlcGq", "W4rzW6nkW4G", "WP3dV2NcNSkIW78YWQ0CDK5Gya", "BI7dQdJdQ8oS", "W7SinmooaXJdPa", "WOnpW65Pmq", "dxddVConmZldLHtdSgRdHmoSzx/cPmkcW6rhWOi0", "wYJcVmo/msRdUqxdUW", "k8kUiq", "5Q6i5P+j5OMq5Q6S5zoa5y2L6ios6AcUvUASVEE4S+wpKU+8N+ExKos5JUw4MEIMOEA3PUAYIowMOoAgOE+9N+IfIEADKUs+J+wgP+s+R+EuIUw9UoMdJoA1IEAZQUwmGq", "aaRcO8oYkSomhmkycY4", "lHNdTXLqtqFcVSksWQ9zWQZcTZ/cJZ8iW7Ld", "5P2S5Qcx5B6u6iIY5lUl776z5AAz5yU4", "W7FdKMhdN2hcQCkY", "dh7dU8oZdJ3dLX4", "F/cAVQJVUBW", "oYxdQdFdSq", "aW0ul8kw", "C0qyW7SW", "j/c8Oy1p", "actcRJXl", "uMX+lSkWkNtcPJu", "WOFcS0ddR0jJW7yMW6tcKfqbWPpcNmoUWQuTW75zimoMlMq", "W79bWRpdTmkd", "BGNdUhOGpWlcVG", "WRvUW7RdQGu", "uJPIqrZdUNDUrCoteSoBWQy3FCkdW4xdP2lcT2e", "W4fbaqddKSk6BN5lzSkYC8omW6BcVbZcGmkUxv4IkmoQ", "xXVdQwK", "lLbupZa", "bSoDWR8mW7NdLmkkW40GqSoypCoaWRTAW7RdNCkX", "W65wE8kdW44", "F8oCW4aGW48", "WOrEv8kUySkNWQngWOldMcTYy3JcVCoCWO5rnthdJmo6W44", "lCoQWPK2W4ZdRmk4", "FCknWPS", "WQ12smkhzW", "y3RdICoJWOu", "WPLJg3lcNSogEq", "W5SxWRKBW50", "tmodW4O9W7pdV39L", "W6LuDmkOW4m", "qCk8W4n3W7O", "ugu8", "imkufXddMq", "hcJcKCoCW5tcUq", "WQhcSSokw8o0", "W6SmkCoY", "FSovW5SmW5ldSxLPc8oOWQfYWRBcOq", "W7FdTCkPWRVcL1VdV1RdNSo0", "5ywA57Is5y6Q8kYvMU++LUwWLowCQe4", "lmoGWO0", "WQtcJMFcPw4oomkuivRdO8oa", "zSk4W7TLW6fzW73dRq", "5P+Y5Qgy57IS5PYK5lI977+y5AET5yQC", "eEI+LEACKU+8Oq", "c0VdNmogaG", "WOnOmehcHa", "W7tdPSkLWQO", "uMS2Eq", "WO1iW4LKnhldVKRdHfdcVa", "cdawuWZcMGNcJSkF", "ASolW4BdQSoM", "WPjPW7VdRYJdTmkH", "W7pcS3PmWOi", "ys7cHW", "cH7dNG3dTW", "DLSnW74dW7RdNG", "oahcQ8oUW54", "5B+V5yM35Rcn5PYk56wv5QsL5PEe55I65RkV5PYi776I5BAc6is+5yUJ56wM5QAS566e57MZ", "8lIBHMdORBhMSBtLPzROTRvc4PY9yUAvIEwqG+w7G+AxUoAmRW", "dCoJWQSCW6a", "zSk4W7P8W6TwW6NdPG", "fWZcHSolW6G", "W6SVc0NcP8keW7tcSq", "WRCZj8oMWObYW67cImkLxIpdO8kmWOm", "nNLEbZVcQHnZfSk/WPW", "WOBcVuBdKx9SW7CS", "BCocW4OQW7JdShDYcCoh", "d8oxWQ4SW7K", "jtVcSY9p", "WQ3cNNFdUJK", "r8kKWQqsW7e", "W6dcK25qa3KozCooEmoOWPvoiCo3WQqgW7lcLgNdJG", "zSoiqG"], ...function () {
+        return ["aYZcJmolW5RcS8oE", "W5bvW4S", "WRldQ8oL", "WQJdOCo0g14", "nbVdVND2W7a9WPVdOCkjwdTd", "5BwU5lYs55wO5B2T6ycP5RsS5RkK5yYd776T5yIR5l+W", "vxDqW505", "WPVdQmobbuO", "W6ZdLwddVa", "W5yLWQWhW4OLyCovqKyXy8opvmknm8o8W5m7", "4P6sWQtMT4xMSApLVjVLURlVVyZLJONOG4xOPO3LJQZPOAhMJAJVV7FOR5lNQ6RLK5tLHOtORz9U", "WPXPW7m", "jq4nn8k8", "s8o+W4FdTCoFmCoIumoGqCkVWQDpW487WR0h", "44kH5O6q56EI44gA6k2C5ysz6i6Z5y2WDwGUEmoWva", "vYlcTmkJEM7cJeZcJca", "dhNcNCkiWOG", "CYpcHSo1ja", "s2SVECkFkSk8hCk7cIG", "WPVdTCoJW4jZWPRdHq", "W5r5qmk5W4O", "zCoHWRLYWPm", "vSkFW5b9W60", "DCoFW4G", "qaRcOCoVfSoBrmkDm2NcLW", "WRVcUmog", "W5PBW55UW41BeComW4VdPSob", "WQNdRmoojv8", "oejMaaW", "xrVdR2uNmaNcTa", "WOFcUuddSfLLW7GTW7BcK1qhWOlcQq", "WQ3cHMNdU0q", "ew9c", "v8oNW53dNSo8", "FvCg", "BCkGW4TWW5bCW4BdP0rbWRe2W5K", "x2i0DCkohCkEaCkHaI/dLSoUggefE1FdOZ9A", "W6rVz8kcW4WMWRVdNSk3rdldOCkTWQ8BfetcLSoFWPRdMwlcJa", "W7y2lKpcG8kQW4RcR8kdWOS", "WO/dQSolhgG", "eJ3dIHRdUa", "DmohqahdUWbQFhdcRCkTW73dNtfuWQ0", "bSoDWR8mW7NdLmkkW40GqSoypCoaWRTAW6tdU8kleZn2W5HbW4ig5PQ05zgp6ycx556Z776IWOLBWOxdNa94pKDsWPlVVANVVjpPUylORy3KU7tPGB3NNPa", "FSovW5ScW5JdRwfHcCoB", "W4VXJBo5WQq", "aIBcMa", "WOKGWOK", "EmouW4SkW5pdU2bNfW", "WQjtmwJcJW", "WRLxySkMWRH4mSof", "zmojqdFdVszIDLxcNmkJW73dVXzjWRijWPeUW7VcVLqU", "WPZcGSo7ECoH", "pWpdJ3TrW6CrWOFdL8kuzq", "WQVcU2ZdPNq", "77+T56Yg57Mj", "tMC0tmk4", "xrVdR2u7lqRcQCozfmoF", "iXdcRJ9SmXJcPCokWOTm", "WQitFmktWOVcH2JdJdC+", "EeSPW68m", "sK80W6SA", "W6iTWOG4W4C", "iCkbWPH9W58", "WPzgW5O", "WOb1hNRcLmohvd/cQmkapmoMkW", "g2LD", "W7xdI1DDkG", "tNncW54yva", "WRSsFG", "W6xcNxetpgmfCmo6zCoP", "WRpdOCoXjhJdRsu", "W5PBW593W5TjbSoA", "WPtcRLhdMwv2W7a3W4a", "e8oIWRO2W4e", "W5WLWQS4W4O2yq", "wgu1Eq", "sdDhECon", "WPXiW49Sd07dVvy", "lrddMhnqW7SaWPtdQ8kJzdTcCbm", "iCkGnrFdQ8oUxCom", "ECkwWOGoW41KpJfCFexcItddMmksdSo+q8kyWRH/vW", "ExVcSJ3dPmkOkY9l", "WOK4BINcGa", "lI3dTthdM8k/btq", "WRtcNuDEoXlcUuhdVmorWPC", "5B2i5yMZ56AZ5QAa7724", "5Pw+6i+75AA26lw5776E5P+7556g54UT5OcaCG", "W6tdQmk4WO3cPLtdVu3dUmo6W73dMSo7W4/dQNJdGwO3WP3cQ8oZfa", "hpcUK4pVVllKVl7NIPtLTPlMI7JNHBNVVAe", "ob7cVq", "lsldSq", "WQXRiulcLmkQW5hcPCkgWQVdGSkUW7OZWQS", "WOL3W6eMW6yqBSoVzW", "WRiWjCo/WOXWW6K", "WQNcKwK", "WQ7dJ8owlvC", "WOTTl3BcS8oqEcpcNSkDaq", "iCorWP0UW5S", "W6NcJXpdTmoW", "W4mHWRyVW4q8", "uw8OB8kmh8k8", "y8kaWQ8mW6G", "m8oVW4D/W4v5W57dVa", "bNddRG", "5BEX5l+z55sC5B6p6ykw5Rsa5RcX5y2Y77Yy5yQc5l6B", "W6JdRehdO0m", "psFcItz1", "nmk4WRHZWPy", "dZ1Ql8ovqCoPn8kPmWVdT8op", "WPCsDmkbWOm", "WRaaA8kBWOFcH2VdKq", "W7GBbSodqq", "gCkSWOG", "W4PwWPZdR8k7", "5P+h6kEV6zwC", "5PQK5PAl5RoN5PYE5y6S5lYZ6ycO5OIg772V6k+S5OQR5B2i5lUP5lUufSkYWOdMOklMN6q", "nq3dMLn2W6y", "WOBcTvRdNvPUW6G", "W5roW5HZW6Ssw8krW7RdPmohxSk5zCobW4xdO8k3W5VdL8oLWQldMrpcUCkcfx0TWO7dHHGhW4tcLW", "s8o+W4FdTCogj8oXr8oCzmkP", "W5jtW49OW5zjgCoB", "W6fZE8k1W5e", "WPDmdLpcGq", "hSkSWOtcQSoln8oIqCoczW", "W4vsrSkyW6WyWOVdUSkIDGhdMSkhWQ4Rke3cO8oKWRhdKG", "WRlcTCo/W6RdPWpcRrdcGmk9", "5RcT5RMe5lQI6lE8", "tmo7W5hdNCo9mCoMuSo1", "iCkIjfBdIq", "B8ojuW", "5P2k5QgW57Uk5P2Q5lMi77+L5AwB5yIp", "5yMe5AAP5y6R5yAk5zY+5PEK5OYA5B+35BQ/W4OQ6k6P55Ml5B2c5lUg5lUCxCobsoACOoEDG+weLUwEOUwkIEIbGEABSEwrOEASLow4Pb8", "W4uVWQWQW4CuASodrga4", "WRJdP8olbfe", "WRiYjSoOWO4gWOtdS8karGy", "imkUmIddH8o6x8ohcLRdVSkLvCkaWRjmn8oeW48", "WOXev8k7ESkNWQm", "WReKWQmAWOe", "mCkVarxdMG", "iCkGna7dOCoHsCoh", "iCkbWPPpW5S", "W6yXWReQW4i"];
       }()];
     }()];
   }();
   Iii11l = function () {
-    return iliIi1;
+    return II11l1;
   };
   return Iii11l();
 }
 ;
-async function taskFnc(lllI11, I1lIll) {
-  const IIii1I = I1llIl,
-    I1lIli = {
-      "cZbgq": IIii1I(679, "qXRN"),
-      "tJnOY": "\u7A7A\u6C14\uD83D\uDCA8",
-      "QNBNn": function (iiill1, lIli1i) {
-        return iiill1 === lIli1i;
-      },
-      "DRTQk": IIii1I(503, "ObUp"),
-      "CMUZn": IIii1I(823, "C9qI"),
-      "atGGh": IIii1I(555, "a^o@"),
-      "ZaiIj": "Wufkd",
-      "NLwaq": IIii1I(553, "ndL&"),
-      "dPLUp": function (IIIII1, I1lIlI) {
-        return IIIII1 === I1lIlI;
-      },
-      "gdomZ": IIii1I(633, "tR]F"),
-      "YnYSe": function (ii1ill, II1iI) {
-        return ii1ill === II1iI;
-      },
-      "Aqwyn": IIii1I(606, "Lh!p"),
-      "NuDNZ": "\u4F1A\u5458\u7B49\u7EA7\u4E0D\u8DB3",
-      "SSxMj": function (llI1II, lIli1l) {
-        return llI1II === lIli1l;
-      },
-      "bKMNf": IIii1I(623, "ReRH"),
-      "UUHNK": "POST",
-      "PScdG": "https://api.m.jd.com/client.action",
-      "xCdKf": "Live_Room",
-      "gyCfd": IIii1I(605, "tR]F"),
-      "pCfsJ": function (lillIi, illIi1) {
-        return lillIi(illIi1);
-      },
-      "VYlEP": IIii1I(625, "Ab7u"),
-      "moWrm": IIii1I(755, "ReRH"),
-      "rNWaw": IIii1I(518, "%cxN"),
-      "yumXL": "zh-Hans-CN;q=1, en-CN;q=0.9, zh-Hant-CN;q=0.8",
-      "nfpug": "keep-alive",
-      "MKYAV": "empty",
-      "zaXld": IIii1I(724, "&zDZ"),
-      "UVfkH": "same-origin",
-      "jHHZZ": IIii1I(589, "Gt2@"),
-      "JBiFm": IIii1I(579, "3p[Q"),
-      "YZekb": function (ii1ili, liil1i) {
-        return ii1ili === liil1i;
-      },
-      "AWhih": "hmVjE",
-      "IrXXr": function (lI1lil, i1l1iI, liil1l) {
-        return lI1lil(i1l1iI, liil1l);
-      },
-      "SdZSa": function (lI1lii, Iiili1) {
-        return lI1lii >= Iiili1;
-      },
-      "ulfJJ": function (Iil1l1, i1i11I) {
-        return Iil1l1(i1i11I);
-      },
-      "HIVhd": function (il1iIl, iii1ii) {
-        return il1iIl === iii1ii;
-      },
-      "sxBoC": IIii1I(536, "8NB#"),
-      "NcRPk": function (il1iIi, iii1il) {
-        return il1iIi(iii1il);
-      }
+async function choiceGoodsForFarm(i11iil) {
+  const llIli = liiI1i,
+    Ill1i = {
+      "imageUrl": "",
+      "nickName": "",
+      "shareCode": "",
+      "goodsType": i11iil,
+      "type": "0",
+      "version": 11,
+      "channel": 3,
+      "babelChannel": 0
     };
-  if ($[IIii1I(715, "SeZf")]) return {
-    "runEnd": true
-  };
-  const II1ii = I1lIli[IIii1I(720, "AB[Z")](decodeURIComponent, common[IIii1I(773, "ic&Z")](lllI11, IIii1I(683, "F)pI"))),
-    IIIIII = IIii1I(550, "Ab7u") + I1lIll + "\u3011" + II1ii + "\uFF1A",
-    lillII = notify[IIii1I(548, "%cxN")](I1lIll, II1ii);
-  if (pinFilter[IIii1I(674, "tJ8k")] > 0 && (pinFilter["includes"](II1ii) || pinFilter["includes"](encodeURIComponent(II1ii)))) {
-    lillII[IIii1I(516, "$Il9")](IIii1I(818, "&5!E")), console["log"](lillII["getInlineContent"]()), $["needRemoveCookieIndex"][IIii1I(582, "8NB#")](I1lIll);
-    return;
-  }
-  const ii1ilI = await common[IIii1I(670, "8NB#")](lllI11);
-  if (!ii1ilI && typeof ii1ilI === IIii1I(619, "qXRN")) {
-    if (I1lIli["HIVhd"]("qSzjR", IIii1I(453, "pNiu"))) l1l11i[IIii1I(495, "ipL6")](l1iIl), illIll && (Iiil1[IIii1I(694, "ic&Z")] = true);else {
-      console[IIii1I(654, "Lh!p")](IIIIII + "\u8D26\u53F7\u65E0\u6548"), lillII["fix"](I1lIli[IIii1I(502, "tJ8k")]), $[IIii1I(595, "SeZf")]["push"](I1lIll);
-      return;
-    }
-  }
-  const lI1ll1 = common[IIii1I(447, "C9qI")](II1ii),
-    iIiI1 = common[IIii1I(671, "qXRN")](II1ii),
-    liil1I = common[IIii1I(488, "Lh!p")]();
-  if ($[IIii1I(799, "l659")]) return {
-    "runEnd": true
-  };
-  let i11ii1 = "";
-  await I1lIli[IIii1I(526, "Gt2@")](l1iII1, I1lIli[IIii1I(608, "&zDZ")]);
-  if ($[IIii1I(700, "Rt34")]) return {
-    "runEnd": true
-  };
-  if ($["waitTime"]) await $[IIii1I(778, "&zDZ")]($[IIii1I(644, "&5!E")]);
-  await I1lIli[IIii1I(610, "ReRH")](l1iII1, I1lIli[IIii1I(499, "ipL6")]);
-  if ($[IIii1I(448, "a^o@")]) await $["wait"]($[IIii1I(617, "$tp%")]);
-  function IlIliI(I1l11i, iIIiiI) {
-    const llI11i = IIii1I;
-    if (I1lIli["QNBNn"](llI11i(660, "a^o@"), I1lIli[llI11i(621, "Rt34")])) delete I11iIi[llI11i(471, "PIJ5")], delete I1ilII[llI11i(707, "%cxN")][I1lIli["cZbgq"]];else try {
-      switch (I1l11i) {
-        case I1lIli["CMUZn"]:
-          if (I1lIli[llI11i(511, "$Il9")](iIIiiI[llI11i(798, "Lh!p")], "0") && I1lIli["QNBNn"](iIIiiI[llI11i(706, "GeCP")], "0") && iIIiiI[llI11i(463, "C9qI")]) {
-            const ililIi = iIIiiI["data"]?.["lotteryRewardDetail"] || {},
-              lilIIl = ililIi?.["rewardType"] || "",
-              ililIl = ililIi?.[llI11i(647, "AWc*")] || ililIi?.[llI11i(446, "y00*")] || 0;
-            let liiI1l = "";
-            switch (lilIIl) {
-              case 3:
-              case 13:
-                liiI1l = ililIl + "\u4EAC\u8C46", i11ii1 = ililIl + llI11i(806, "PIJ5");
-                break;
-              case 8:
-                liiI1l = I1lIli[llI11i(560, "$Il9")], i11ii1 = llI11i(490, "l659");
-                break;
-              default:
-                liiI1l = llI11i(820, "a@n6") + lilIIl + ")", i11ii1 = "\u672A\u77E5\u5956\u54C1(" + lilIIl + ")";
-            }
-            if (!$[llI11i(712, "l659")]) {
-              if (I1lIli["ZaiIj"] !== "OuTiW") {
-                $[llI11i(515, "bXr%")] = true, console["log"](llI11i(478, "ReRH") + $["liveId"]);
-                if (lilIIl === 3 || I1lIli[llI11i(677, "F)pI")](lilIIl, 13)) {
-                  if (llI11i(743, "SeZf") !== I1lIli[llI11i(546, "$tp%")]) {
-                    if (ililIl < rewardnum) {
-                      if (I1lIli["dPLUp"](llI11i(787, "pNiu"), I1lIli[llI11i(803, "F)pI")])) lI11II[llI11i(551, "^!J@")] = true, l1llI1["message"] && lii["message"][llI11i(561, "pNiu")](IllI1i);else {
-                        console["log"](llI11i(652, "C9qI") + rewardnum + "\u4E2A\uFF0C\u4E0D\u8DD1~"), $[llI11i(443, "AB[Z")] = true;
-                        return;
-                      }
-                    }
-                  } else delete Iiiil["data"], delete Iiiii[llI11i(618, "UpmU")][I1lIli["cZbgq"]];
-                }
-                console[llI11i(596, "8NB#")]("\u6D3B\u52A8\u5956\u54C1\uFF1A" + liiI1l);
-                if (![3, 13][llI11i(659, "YZ9I")](lilIIl)) {
-                  if ("RrDWp" !== llI11i(491, "&zDZ")) ll1il[llI11i(598, "SeZf")](IiiIiI + llI11i(559, "qXRN")), lilii["insert"](I1lIli[llI11i(744, "a^o@")]);else {
-                    console[llI11i(801, "ndL&")]("\u5783\u573E\u6D3B\u52A8\u4E0D\u8DD1\u4E86~"), $[llI11i(812, "&5!E")] = true;
-                    return;
-                  }
-                }
-                console["log"]("");
-              } else Iiii1[llI11i(616, "9mpm")](lIIili + llI11i(681, "LDu9"));
-            }
-          } else console[llI11i(493, "$tp%")](IIIIII + llI11i(664, "#9o@"));
-          break;
-        case llI11i(583, "$Il9"):
-          if (I1lIli[llI11i(738, "%cxN")](iIIiiI[llI11i(646, "$Il9")], "0") && iIIiiI[llI11i(727, "ipL6")] === "0" && iIIiiI[llI11i(759, "Rt34")]) {
-            if (iIIiiI[llI11i(438, "8NB#")]?.[llI11i(811, "gBkk")]["includes"]("\u4E2D\u5956")) console[llI11i(801, "ndL&")]("" + IIIIII + i11ii1), lillII[llI11i(750, "qXRN")](i11ii1);else {
-              const i1l1Il = iIIiiI[llI11i(588, "$tp%")]?.["rewardTitle"] || "";
-              let llIli = i1l1Il;
-              I1lIli[llI11i(696, "eoFR")](i1l1Il, llI11i(556, "l659")) ? (console[llI11i(544, "ic&Z")](IIIIII + "\u7A7A\u6C14\uD83D\uDCA8"), lillII[llI11i(525, "$tp%")](I1lIli[llI11i(713, "$tp%")])) : (i1l1Il[llI11i(808, "pNiu")]("\u7B49\u7EA7") && (I1lIli["Aqwyn"] === llI11i(797, "ndL&") ? l1iIIi[llI11i(634, "l659")](llI11i(554, "l659") + lilIi + " \u8BF7\u6C42\u54CD\u5E94 " + (l1l11I["message"] || lilIl)) : llIli = I1lIli["NuDNZ"]), console[llI11i(440, "3p[Q")]("" + IIIIII + llIli));
-            }
-          } else I1lIli[llI11i(688, "g^*J")](llI11i(631, "9mpm"), llI11i(570, "bXr%")) ? llIlli = llI11i(783, "l659") : console[llI11i(440, "3p[Q")](IIIIII + llI11i(805, "1[2a"));
-          break;
-      }
-    } catch (II11l1) {
-      console[llI11i(651, "PIJ5")]("\u274C \u672A\u80FD\u6B63\u786E\u5904\u7406 " + I1l11i + llI11i(613, "F)pI") + (II11l1[llI11i(513, "bXr%")] || II11l1));
-    }
-  }
-  async function l1iII1(Iil1lI) {
-    const i1iIi1 = IIii1I;
-    if ($[i1iIi1(580, "%cxN")]) return;
-    let IiiliI = "",
-      iii1iI = null,
-      llIll = null,
-      il1iII = I1lIli["UUHNK"],
-      iilli = {};
-    switch (Iil1lI) {
-      case i1iIi1(459, "qXRN"):
-        IiiliI = I1lIli[i1iIi1(501, "ReRH")], iilli = {
-          "lotteryId": ""["concat"]($["lotteryId"] || ""),
-          "pageId": I1lIli[i1iIi1(676, "EUo4")],
-          "shared": "1",
-          "liveId": ""["concat"]($[i1iIi1(747, "#9o@")] || "")
-        }, llIll = {
-          "functionId": i1iIi1(603, "a@n6")
-        }, iii1iI = common[i1iIi1(510, "gBkk")](await common["getSign"](i1iIi1(735, "eoFR"), iilli));
-        break;
-      case I1lIli[i1iIi1(464, "y00*")]:
-        IiiliI = I1lIli["PScdG"], iilli = {
-          "liveId": ""[i1iIi1(816, "kHwg")]($[i1iIi1(749, "y00*")] || ""),
-          "pageId": I1lIli[i1iIi1(475, "0(LI")],
-          "fansLevel": 1,
-          "eid": "",
-          "lotteryId": ""[i1iIi1(785, "9mpm")]($[i1iIi1(754, "]y5]")] || ""),
-          "plus": 1,
-          "token": "",
-          "nickName": I1lIli[i1iIi1(458, "Rt34")](encodeURIComponent, II1ii)
-        }, llIll = {
-          "functionId": i1iIi1(461, "3p[Q")
-        }, iii1iI = common[i1iIi1(472, "uJTo")](await common[i1iIi1(489, "SeZf")](I1lIli[i1iIi1(822, "bXr%")], iilli));
-        break;
-      default:
-        console[i1iIi1(772, "#9o@")]("\u274C \u672A\u77E5\u8BF7\u6C42 " + Iil1lI);
-        return;
-    }
-    const IlllIl = {
-      "url": IiiliI,
-      "method": il1iII,
-      "headers": {
-        "Accept": I1lIli[i1iIi1(802, "ReRH")],
-        "Accept-Encoding": I1lIli[i1iIi1(476, "l659")],
-        "Accept-Language": I1lIli[i1iIi1(662, "&5!E")],
-        "Connection": I1lIli["nfpug"],
-        "Content-Type": i1iIi1(815, "^!J@"),
-        "Cookie": lllI11,
-        "J-E-H": liil1I,
-        "J-E-C": iIiI1,
-        "Sec-Fetch-Dest": I1lIli[i1iIi1(667, "pNiu")],
-        "Sec-Fetch-Mode": I1lIli[i1iIi1(457, "^!J@")],
-        "Sec-Fetch-Site": I1lIli[i1iIi1(687, "$tp%")],
-        "User-Agent": lI1ll1,
-        "x-referer-package": I1lIli["jHHZZ"],
-        "x-rp-client": I1lIli["JBiFm"]
-      },
-      "params": llIll,
-      "data": iii1iI,
-      "timeout": 30000
-    };
-    if (I1lIli[i1iIi1(543, "AB[Z")](il1iII, i1iIi1(705, "pNiu"))) {
-      if ("BhENZ" !== I1lIli[i1iIi1(817, "iy[E")]) delete IlllIl[i1iIi1(789, "tJ8k")], delete IlllIl[i1iIi1(796, "LDu9")]["Content-Type"];else {
-        const iilll = lili1[i1iIi1(527, "pNiu")]?.[i1iIi1(711, "a@n6")] || "";
-        let il1iI1 = iilll;
-        I1lIli[i1iIi1(529, "ipL6")](iilll, I1lIli[i1iIi1(517, "&zDZ")]) ? (ii1ll[i1iIi1(690, "1[2a")](IliI1l + "\u7A7A\u6C14\uD83D\uDCA8"), lliiil[i1iIi1(807, "PIJ5")](I1lIli[i1iIi1(714, "kHwg")])) : (iilll["includes"]("\u7B49\u7EA7") && (il1iI1 = I1lIli[i1iIi1(524, "bXr%")]), lliiii["log"]("" + IliI1i + il1iI1));
-      }
-    }
-    const II11lI = 1;
-    let lI1IIi = 0,
-      I1l11I = null,
-      Ilil1l = false;
-    while (lI1IIi < II11lI) {
-      const IlllIi = await common["request"](IlllIl);
-      if (!IlllIi[i1iIi1(522, "9mpm")]) {
-        I1l11I = i1iIi1(486, "9mpm") + Iil1lI + " \u8BF7\u6C42\u5931\u8D25 \u279C " + IlllIi[i1iIi1(781, "R7zK")], lI1IIi++;
-        continue;
-      }
-      if (!IlllIi[i1iIi1(587, "uJTo")]) {
-        if ("ZDqzU" === i1iIi1(768, "%cxN")) {
-          I1l11I = i1iIi1(468, "9h%U") + Iil1lI + i1iIi1(535, "$tp%"), lI1IIi++;
-          continue;
-        } else lilIl1[i1iIi1(728, "ObUp")](i1l1ii[i1iIi1(572, "eoFR")], i1iIi1(730, "0(LI")), i1l1[i1iIi1(615, "Gt2@")](1);
-      }
-      I1lIli[i1iIi1(504, "C9qI")](IlIliI, Iil1lI, IlllIi[i1iIi1(558, "iy[E")]), Ilil1l = false;
-      break;
-    }
-    I1lIli[i1iIi1(710, "GeCP")](lI1IIi, II11lI) && (console[i1iIi1(772, "#9o@")](I1l11I), Ilil1l && ($[i1iIi1(494, "$Il9")] = true));
-  }
+  $[llIli(481, "fzI!")] = await request("choiceGoodsForFarm", Ill1i);
 }
-async function handleResponse(i1l1Ii, I1iIIi) {
-  const l1l1il = I1llIl,
-    I1iIIl = {
-      "IalEK": function (lI1IIl, i1ilI) {
-        return lI1IIl === i1ilI;
+async function request(ii1iil, lllI1l = {}) {
+  const i1i11l = liiI1i,
+    i11iii = {
+      "whLrF": i1i11l(637, "txF@"),
+      "qGcLM": i1i11l(238, "BiiY"),
+      "ZiVni": i1i11l(365, "He&s"),
+      "XoYcS": "102f5",
+      "UaHvG": i1i11l(616, "&wJj"),
+      "oLyIz": i1i11l(285, "P(hT"),
+      "AsmwM": i1i11l(256, "Tc0m"),
+      "SJSse": "71547",
+      "VHTVe": i1i11l(374, "jPP9"),
+      "aTUXE": i1i11l(383, "FAmv"),
+      "UHUwg": i1i11l(263, "[7KZ"),
+      "NLiEm": i1i11l(307, "KQyc"),
+      "xcOIP": i1i11l(556, "sT]["),
+      "VFtik": i1i11l(272, "fzI!"),
+      "rmoPU": "2ca57",
+      "WUhat": "eaf91",
+      "chZNw": i1i11l(602, "txF@"),
+      "zDINa": i1i11l(363, "goqf"),
+      "QnIKq": "15507",
+      "siokc": "157b6",
+      "eqTkG": i1i11l(622, "QWFe"),
+      "bshdi": i1i11l(496, "B[vv"),
+      "pKgpF": i1i11l(561, "uK%F"),
+      "HFjKq": i1i11l(404, "&v(!"),
+      "KgXZB": "08dc3",
+      "hqIcJ": "32b94",
+      "hzfvR": i1i11l(329, "9HJc"),
+      "byUxf": function (illIii, ii1il1) {
+        return illIii(ii1il1);
       },
-      "eptzh": function (iii1lI, i1ilI1) {
-        return iii1lI === i1ilI1;
+      "fcISH": i1i11l(302, "9GV*"),
+      "MqMdA": i1i11l(265, "T!#)"),
+      "nRAVs": function (lI1llI, illIil) {
+        return lI1llI + illIil;
       },
-      "rLhqK": l1l1il(648, "bXr%"),
-      "wCZch": l1l1il(673, "Rt34"),
-      "VNJwZ": l1l1il(779, "&zDZ"),
-      "fgUkc": l1l1il(604, "8NB#"),
-      "OvgxF": l1l1il(709, "Lh!p"),
-      "lrKoA": l1l1il(767, "eoFR")
+      "yEysS": function (Ill1I, i11iiI) {
+        return Ill1I * i11iiI;
+      },
+      "qJiuQ": i1i11l(507, "P(hT"),
+      "ZqMFj": i1i11l(275, "IKY3"),
+      "QEBGW": i1i11l(620, "a@Fw"),
+      "lvmEa": i1i11l(341, "t(FI"),
+      "zvKUs": i1i11l(466, "cvWH"),
+      "ugwgD": i1i11l(538, "aX3C"),
+      "WyShr": function (lIli11, lllI1I) {
+        return lIli11 < lllI1I;
+      },
+      "TUtfU": function (lillI1, IlIlii) {
+        return lillI1 > IlIlii;
+      },
+      "hkSbK": function (i1l1i1, liil11) {
+        return i1l1i1 !== liil11;
+      },
+      "SuQNn": i1i11l(494, "@o2C")
     };
-  try {
-    switch (i1l1Ii) {
-      case l1l1il(470, "1[2a"):
-        if (I1iIIl[l1l1il(567, "YZ9I")](I1iIIi["code"], "0") && I1iIIl[l1l1il(449, "$Il9")](I1iIIi[l1l1il(626, "qXRN")], "0") && I1iIIi["data"]) {
-          if (I1iIIl[l1l1il(575, "&zDZ")] === "cLinb") {
-            const Iiilii = I1iIIi[l1l1il(496, "R7zK")]?.[l1l1il(649, "GeCP")] || [];
-            for (const Iil1li of Iiilii) {
-              const {
-                type: Iiilil,
-                data: Iil1ll,
-                actionType: iillI
-              } = Iil1li;
-              switch (Iiilil) {
-                case l1l1il(668, "SeZf"):
-                case I1iIIl["wCZch"]:
-                  break;
-                case "new_anchor_darw_lottery":
-                  switch (iillI) {
-                    case 3:
-                      $[l1l1il(813, "AB[Z")] = Iil1ll[l1l1il(586, "iy[E")], $[l1l1il(753, "l659")] = Iil1ll[l1l1il(678, "#9o@")];
-                      break;
-                    default:
-                      console[l1l1il(591, "YZ9I")](I1iIIl[l1l1il(528, "^!J@")]);
-                      break;
-                  }
-                  break;
-              }
-            }
-          } else i1ii = 1;
-        } else "RBOuk" !== l1l1il(740, "8NB#") ? console["log"](I1iIIl[l1l1il(601, "tJ8k")]) : l1iIIl[l1l1il(612, "%cxN")] = true;
-        break;
-    }
-  } catch (IllIiI) {
-    if (I1iIIl["OvgxF"] === I1iIIl[l1l1il(466, "AB[Z")]) try {
-      const I1l111 = li1II(IliI11);
-      I1l111 >= 0 && (i1l1lI[l1l1il(741, "bXr%")] = I1l111);
-    } catch {
-      I1iIii[l1l1il(563, "F)pI")](l1l1il(532, "g^*J"));
-    } else console[l1l1il(584, "9h%U")](l1l1il(469, "y00*") + i1l1Ii + " \u8BF7\u6C42\u54CD\u5E94 " + (IllIiI["message"] || IllIiI));
-  }
-}
-async function sendRequest(IIii1l) {
-  const I11i1I = I1llIl,
-    I1iIII = {
-      "HTOWw": function (II11ll, liiI1I) {
-        return II11ll < liiI1I;
-      },
-      "Lyzxg": I11i1I(498, "0(LI"),
-      "SNAzP": I11i1I(536, "8NB#"),
-      "snirF": I11i1I(451, "ReRH"),
-      "GoyUw": "Live_Room",
-      "efqnw": "liveActivityV946",
-      "aHfll": I11i1I(762, "l659"),
-      "CaPfM": I11i1I(736, "^!J@"),
-      "BwKRp": I11i1I(656, "gBkk"),
-      "VixaP": "application/x-www-form-urlencoded",
-      "HuDtA": I11i1I(793, "C9qI"),
-      "OyAEL": I11i1I(734, "3p[Q"),
-      "NVRjA": I11i1I(716, "SeZf"),
-      "hMQzY": I11i1I(445, "]y5]"),
-      "oaqKn": function (ililII, lI1II1) {
-        return ililII === lI1II1;
-      },
-      "RRbPU": I11i1I(701, "Rt34"),
-      "oPUzM": function (i1ilII, iIIii1) {
-        return i1ilII === iIIii1;
-      },
-      "kXbBg": I11i1I(669, "ndL&"),
-      "fVnkP": function (IllIi1, lilIII, Ii1ilI) {
-        return IllIi1(lilIII, Ii1ilI);
-      }
-    };
-  if ($[I11i1I(742, "8NB#")] || $[I11i1I(694, "ic&Z")]) return;
-  let liiI11 = "",
-    ililI1 = null,
-    IIii1i = null,
-    i1ili = "POST",
-    Iiill1 = {};
-  switch (IIii1l) {
-    case I1iIII["snirF"]:
-      liiI11 = I11i1I(592, "9h%U"), Iiill1 = {
-        "pageId": I1iIII[I11i1I(609, "^!J@")],
-        "liveId": ""[I11i1I(761, "uJTo")]($["liveId"] || "")
-      }, IIii1i = {
-        "functionId": I1iIII["efqnw"]
-      }, ililI1 = common[I11i1I(628, "AB[Z")](await common["getSign"](I11i1I(719, "$Il9"), Iiill1));
-      break;
-    default:
-      console[I11i1I(733, "y00*")](I11i1I(795, "9mpm") + IIii1l);
-      return;
-  }
-  const I1iII1 = {
-    "url": liiI11,
-    "method": i1ili,
-    "headers": {
-      "Accept": I1iIII[I11i1I(642, "iy[E")],
-      "Accept-Encoding": I11i1I(769, "ndL&"),
-      "Accept-Language": I1iIII[I11i1I(594, "kHwg")],
-      "Connection": I1iIII[I11i1I(537, "iy[E")],
-      "Content-Type": I1iIII[I11i1I(507, "R7zK")],
-      "J-E-H": $["JEH"],
-      "J-E-C": $[I11i1I(439, "]y5]")],
-      "Host": I1iIII[I11i1I(819, "tR]F")],
-      "Origin": I11i1I(611, "R7zK"),
-      "Sec-Fetch-Dest": I1iIII["OyAEL"],
-      "Sec-Fetch-Mode": I1iIII[I11i1I(693, "&zDZ")],
-      "Sec-Fetch-Site": I1iIII["hMQzY"],
-      "User-Agent": $["UA"]
+  let llI1Ii = "",
+    lllI1i = "POST";
+  const li1i1l = {
+      "initForFarm": i11iii[i1i11l(567, "2O[G")],
+      "taskInitForFarm": i11iii[i1i11l(484, "A4yY")],
+      "browseAdTaskForFarm": i1i11l(274, "AG^&"),
+      "firstWaterTaskForFarm": i1i11l(250, "a@Fw"),
+      "waterFriendGotAwardForFarm": i11iii["ZiVni"],
+      "ddnc_getTreasureBoxAward": i1i11l(606, "Vwy@"),
+      "totalWaterTaskForFarm": i11iii["XoYcS"],
+      "gotThreeMealForFarm": i11iii["UaHvG"],
+      "waterGoodForFarm": i1i11l(435, "0&gr"),
+      "choiceGoodsForFarm": i11iii["oLyIz"],
+      "gotCouponForFarm": i11iii[i1i11l(219, "T!#)")],
+      "gotStageAwardForFarm": "81591",
+      "followVenderForBrand": i11iii["SJSse"],
+      "gotWaterGoalTaskForFarm": i1i11l(384, "Ux)#"),
+      "gotNewUserTaskForFarm": i11iii[i1i11l(523, "sT][")],
+      "orderTaskGotWaterForFarm": "eed5c",
+      "clockInForFarm": i1i11l(257, "2O[G"),
+      "clockInFollowForFarm": i1i11l(647, "uK%F"),
+      "waterFriendForFarm": i11iii[i1i11l(511, "S4Ba")],
+      "awardFirstFriendForFarm": i11iii[i1i11l(557, "&v(!")],
+      "awardInviteFriendForFarm": i11iii[i1i11l(309, "fzI!")],
+      "awardCallOrInviteFriendForFarm": i11iii[i1i11l(456, "IKY3")],
+      "userMyCardForFarm": i11iii["VFtik"],
+      "getCallUserCardForFarm": i11iii[i1i11l(595, "I%Vs")],
+      "deleteFriendForFarm": i11iii[i1i11l(314, "gUB[")],
+      "gotLowFreqWaterForFarm": i11iii["chZNw"],
+      "getFullCollectionReward": "5c767",
+      "getOrderPayLotteryWater": i11iii["zDINa"],
+      "receiveStageEnergy": i11iii[i1i11l(579, "2O[G")],
+      "exchangeGood": "52963",
+      "farmAssistInit": i1i11l(292, "He&s"),
+      "myCardInfoForFarm": i11iii[i1i11l(471, "k![b")],
+      "gotPopFirstPurchaseTaskForFarm": i11iii["eqTkG"],
+      "limitWaterInitForFarm": i11iii[i1i11l(231, "SFB7")],
+      "ddnc_surpriseModal": i11iii["pKgpF"],
+      "friendInitForFarm": i11iii[i1i11l(422, "zLIJ")],
+      "clockInInitForFarm": i11iii[i1i11l(593, "gUB[")],
+      "guideTaskAward": i1i11l(536, "KQyc"),
+      "signForFarm": i11iii[i1i11l(291, "0&gr")],
+      "gotNewUserTaskForFarm": i11iii[i1i11l(283, "P(hT")]
     },
-    "params": IIii1i,
-    "data": ililI1,
-    "timeout": 30000
-  };
-  I1iIII[I11i1I(577, "Lh!p")](i1ili, "GET") && (delete I1iII1[I11i1I(444, "&5!E")], delete I1iII1[I11i1I(590, "qXRN")][I11i1I(763, "F)pI")]);
-  const lilII1 = 1;
-  let iill1 = 0,
-    iii1l1 = null,
-    IIliIl = false;
-  while (iill1 < lilII1) {
-    if (I1iIII["RRbPU"] !== I1iIII[I11i1I(473, "3p[Q")]) {
-      if (I1iIII["HTOWw"](llIlii, llIlil)) {
-        IIlii[I11i1I(637, "]y5]")]("\u4EAC\u8C46\u5C0F\u4E8E" + IlI1il + I11i1I(547, "0(LI")), IilliI[I11i1I(700, "Rt34")] = true;
-        return;
-      }
-    } else {
-      iill1 > 0 && (await $[I11i1I(778, "&zDZ")](1000));
-      const iliIil = await common[I11i1I(630, "PIJ5")](I1iII1);
-      if (!iliIil[I11i1I(770, "$Il9")]) {
-        iii1l1 = I11i1I(784, "g^*J") + IIii1l + I11i1I(821, "8NB#") + iliIil["error"], iill1++;
-        iliIil[I11i1I(655, "9h%U")] && iliIil["status"] === 403 && ($[I11i1I(782, "AB[Z")] = true);
+    II1i1 = li1i1l[ii1iil];
+  if (!II1i1) i11iii[i1i11l(473, "pOgc")] !== i1i11l(491, "FAmv") ? (iillll[i1i11l(246, "FAmv")] = true, lIIilI[i1i11l(522, "pOgc")] && IiiIl1[i1i11l(262, "!SmT")]["fix"](lIIil1)) : (lllI1i = "GET", llI1Ii = "https://api.m.jd.com/client.action?functionId=" + ii1iil + i1i11l(347, "uK%F") + i11iii["byUxf"](encodeURIComponent, JSON[i1i11l(516, "Ux)#")](lllI1l)) + i1i11l(465, "&v(!"));else {
+    const l1l111 = await H5st[i1i11l(459, "!SmT")]({
+      "appId": II1i1,
+      "appid": "signed_wh5",
+      "body": lllI1l,
+      "client": i11iii[i1i11l(243, "2O[G")],
+      "clientVersion": common[i1i11l(549, "@o2C")](),
+      "functionId": ii1iil,
+      "cookie": cookie,
+      "ua": $["UA"],
+      "version": i11iii["MqMdA"],
+      "t": true
+    });
+    llI1Ii = i1i11l(228, "IKY3") + l1l111[i1i11l(336, "haP4")];
+  }
+  await $[i1i11l(502, "!SmT")](parseInt(i11iii["nRAVs"](i11iii[i1i11l(528, "sT][")](waitTimes, 1), 1000), 10));
+  const lI1lll = {
+      "url": llI1Ii,
+      "method": lllI1i,
+      "headers": {
+        "Host": i11iii[i1i11l(535, "cvWH")],
+        "Accept": i11iii[i1i11l(580, "k![b")],
+        "Origin": i11iii["QEBGW"],
+        "Accept-Encoding": i11iii[i1i11l(322, "KQyc")],
+        "User-Agent": $["UA"],
+        "Accept-Language": i11iii["zvKUs"],
+        "Referer": "https://carry.m.jd.com/",
+        "x-requested-with": i11iii[i1i11l(411, "aX3C")],
+        "Cookie": cookie
+      },
+      "body": lllI1l,
+      "timeout": 20000
+    },
+    iIiII = 1;
+  let iil1lI = 0,
+    iiiliI = null,
+    li1i1I = false;
+  while (i11iii[i1i11l(560, "SFB7")](iil1lI, iIiII)) {
+    i11iii[i1i11l(475, "cvWH")](iil1lI, 0) && (await $[i1i11l(447, "&wJj")](1000));
+    const l1iIII = await common[i1i11l(439, "cvWH")](lI1lll);
+    if (!l1iIII["success"]) {
+      if (i11iii[i1i11l(454, "sT][")]("jWaPv", i11iii["SuQNn"])) i1l1li["log"](i1i11l(509, "sT][") + i1ilii[i1i11l(482, "[7KZ")]?.["addEnergy"] + i1i11l(412, "D@e7"));else {
+        iiiliI = "\uD83D\uDEAB \u8BF7\u6C42\u5931\u8D25 \u279C " + l1iIII[i1i11l(313, "SFB7")], iil1lI++;
         continue;
       }
-      if (!iliIil[I11i1I(587, "uJTo")]) {
-        if (I1iIII[I11i1I(658, "l659")](I11i1I(514, "^!J@"), I1iIII[I11i1I(534, "a^o@")])) {
-          iii1l1 = I11i1I(437, "F)pI") + IIii1l + I11i1I(607, "ipL6"), iill1++;
-          continue;
-        } else {
-          IiilI1["log"](I1iIII[I11i1I(814, "Gt2@")]);
-          return;
-        }
-      }
-      await I1iIII["fVnkP"](handleResponse, IIii1l, iliIil["data"]), IIliIl = false;
-      break;
     }
-  }
-  if (iill1 >= lilII1) {
-    console["log"](iii1l1);
-    if (IIliIl) {
-      $["outFlag"] = true;
-      if ($["message"]) {
-        if (I11i1I(576, "qXRN") !== "MRJSz") {
-          Ii1iI1["log"](lilIli + "\u8D26\u53F7\u65E0\u6548"), Iliili[I11i1I(516, "$Il9")](I1iIII[I11i1I(809, "Gt2@")]), Iliill["needRemoveCookieIndex"][I11i1I(636, "pNiu")](IIII11);
-          return;
-        } else $[I11i1I(794, "gBkk")][I11i1I(593, "AWc*")](iii1l1);
-      }
+    if (!l1iIII?.[i1i11l(405, "0&gr")]) {
+      iiiliI = i1i11l(525, "!SmT"), iil1lI++;
+      continue;
     }
+    return data = l1iIII[i1i11l(483, "C@S!")], data;
   }
+  iil1lI >= iIiII && (console[i1i11l(239, "Tc0m")](iiiliI), li1i1I && ($[i1i11l(468, "KQyc")] = true, $[i1i11l(559, "sQ^m")] && $[i1i11l(559, "sQ^m")][i1i11l(574, "pOgc")](iiiliI)));
+}
+function randomString(IlIlil, lIli1I = "qwertyuiopasdfghjklzxcvbnm1234567890") {
+  const i1i11i = liiI1i,
+    II1il = {
+      "Dgnna": function (I1lIll, I1lIli) {
+        return I1lIll < I1lIli;
+      },
+      "reEBv": function (II1ii, IIIIII) {
+        return II1ii * IIIIII;
+      }
+    };
+  let lllI11 = "";
+  for (let lillII = 0; II1il["Dgnna"](lillII, IlIlil); lillII++) {
+    lllI11 += lIli1I[Math["floor"](II1il[i1i11i(442, "0&gr")](Math[i1i11i(500, "sT][")](), lIli1I["length"]))];
+  }
+  return lllI11;
 }
 var version_ = "jsjiami.com.v7";
 // prettier-ignore
